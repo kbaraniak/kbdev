@@ -12,7 +12,7 @@ export default function Home() {
         <NavMenu />
         <p className="text-3xl">...</p>
       </div>
-      <main>
+      <main className="mt-10">
         <AboutMe />
         <Projects />
         <Collaboration />
