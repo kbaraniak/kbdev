@@ -1,11 +1,11 @@
 'use client'
 
 
-export default function Box({ id, website_url, source_url = "", stack=[] }) {
+export default function Box({ id, thumbnail="", website_url, source_url = "", stack=[] }) {
     return (
-        <div className="mx-3" id={`pr-${id}`}>
+        <div className="mx-3" id={`pr-${id.toLowerCase()}`}>
             <div className="w-90 h-55 bg-slate-900 rounded-md flex justify-center items-center text-3xl relative">
-                Project {id}
+                {id}
                 <div className="project-links flex gap-1 absolute bottom-2 right-2">
                     <button
                         className="w-12 h-12 bg-zinc-800 flex justify-center items-center rounded-md hover:opacity-65 transition-opacity"
