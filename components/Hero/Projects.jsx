@@ -9,7 +9,7 @@ export default function Projects() {
             </h2>
 
         {/* Right column: projects grid */}
-            <div className="mt-3 grid grid-flow-col grid-rows-2 gap-10 justify-center">
+            <div className="mt-3 grid grid-flow-col grid-rows-2 max-lg:grid-rows-3 max-md:grid-rows-5 gap-10 justify-center">
                 <Box id="1" website_url="" source_url="" stack={["react", "typescript"]}/>
                 <Box id="2" website_url="" source_url="" stack={["css"]}/>
                 <Box id="3" website_url="" source_url="" stack={["python"]}/>

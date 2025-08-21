@@ -4,7 +4,7 @@ export default function Support() {
             <h2 className="text-4xl font-bold text-center">
                 Support Me
             </h2>
-            <div className="flex items-center justify-center">
+            <div className="flex max-md:flex-col items-center justify-center">
                 <a href="https://discord.gg/ddkdk">
                     <div className="mt-3 mx-2 w-60 h-20 bg-[#5865F2] rounded-md text-center flex items-center justify-center hover:opacity-70 transition-opacity">
                         <svg xmlns="http://www.w3.org/2000/svg" width={32} height={32} viewBox="0 0 24 24">
