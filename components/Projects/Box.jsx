@@ -3,7 +3,7 @@
 
 export default function Box({ id, website_url, source_url = "", stack=[] }) {
     return (
-        <div id={`pr-${id}`}>
+        <div className="mx-3" id={`pr-${id}`}>
             <div className="w-90 h-55 bg-slate-900 rounded-md flex justify-center items-center text-3xl relative">
                 Project {id}
                 <div className="project-links flex gap-1 absolute bottom-2 right-2">
