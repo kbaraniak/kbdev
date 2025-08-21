@@ -4,7 +4,7 @@ import Image from "next/image"
 
 export default function Box({ id, thumbnail="", website_url, source_url = "", stack=[] }) {
     return (
-        <div className="mx-3" id={`pr-${id.toLowerCase()}`}>
+        <div className="mx-3 mb-6" id={`pr-${id.toLowerCase()}`}>
             <div className="w-90 h-55 bg-slate-900 rounded-md flex justify-center items-center text-3xl relative">
                   {thumbnail.length > 0 && (
                     <Image 
@@ -112,7 +112,15 @@ export default function Box({ id, thumbnail="", website_url, source_url = "", st
 
 
                     {/* Backend */}
-                    
+                    {stack.includes("php") && (
+                        <button className="w-24 h-12 bg-violet-800 flex justify-center items-center rounded-md">
+                            <svg xmlns="http://www.w3.org/2000/svg" width={32} height={32} viewBox="0 0 24 24">
+                                <path fill="currentColor" d="M4.931 9.46H3.594l-.73 3.751h1.187q1.181 0 1.76-.445q.577-.445.779-1.486q.194-.999-.176-1.41t-1.483-.41m2.45 4.153c-.369.354-.814.62-1.298.78q-.715.232-1.82.233H2.588l-.463 2.382H.174l1.742-8.962H5.67q1.694 0 2.471.89q.778.888.468 2.482a4 4 0 0 1-.432 1.2a4 4 0 0 1-.795.995m5.701 1.013l.77-3.965q.132-.677-.097-.922q-.227-.247-.973-.247h-1.547l-.997 5.136H8.3l1.742-8.964h1.937l-.463 2.383h1.725q1.63 0 2.247.568t.373 1.84l-.81 4.171zm10.763-3.208c-.078.42-.224.825-.432 1.2a4 4 0 0 1-.795.995c-.37.353-.814.62-1.299.78q-.715.232-1.822.233h-1.671l-.464 2.383H15.41l1.743-8.962h3.752q1.694 0 2.471.89q.778.886.469 2.48M20.169 9.46h-1.336l-.731 3.751h1.187q1.183 0 1.76-.445t.78-1.486q.194-.999-.177-1.41t-1.483-.41" strokeWidth={0.5} stroke="currentColor"></path>
+                            </svg>
+                            <span className="ml-2">PHP</span>
+                        </button>
+                    )}
+
                     {stack.includes("python") && (
                         <button className="w-24 h-12 bg-yellow-800 flex justify-center items-center rounded-md">
                             <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24">
