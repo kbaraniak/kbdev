@@ -129,7 +129,7 @@ export default function NavMenu({ defaultActive = 0 }) {
     <nav className="relative flex md:flex-row flex-col items-center gap-2 bg-neutral-900 p-2 rounded-full w-fit mx-auto">
       <span
         ref={indicatorRef}
-        className="absolute rounded-full border-white border-[3px]"
+        className="absolute rounded-full md:border-white md:border-[3px]"
         style={{ pointerEvents: "none", opacity: 1 }}
       />
       {menuItems.map((item, index) => (
