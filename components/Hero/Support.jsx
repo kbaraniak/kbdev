@@ -13,7 +13,7 @@ export default function Support() {
                         <p className="mx-2 text-2xl">Discord Server</p>
                     </div>
                 </a>
-                <a href="mailto:kbaraniakdev@duck.com">
+                <a href="mailto:kbdev@duck.com">
                     <div className="mt-3 mx-2 w-60 h-20 bg-gray-700 rounded-md text-center flex items-center justify-center hover:opacity-70 transition-opacity">
                         <svg xmlns="http://www.w3.org/2000/svg" width={36} height={36} viewBox="0 0 24 24">
                             <path fill="currentColor" d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2zm-2 0l-8 5l-8-5zm0 12H4V8l8 5l8-5z"></path>
