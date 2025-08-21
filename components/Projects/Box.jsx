@@ -1,31 +1,46 @@
 'use client'
+import Image from "next/image"
 
 
 export default function Box({ id, thumbnail="", website_url, source_url = "", stack=[] }) {
     return (
         <div className="mx-3" id={`pr-${id.toLowerCase()}`}>
             <div className="w-90 h-55 bg-slate-900 rounded-md flex justify-center items-center text-3xl relative">
-                {id}
+                  {thumbnail.length > 0 && (
+                    <Image 
+                            src={`/img/thumbnails/${thumbnail}.jpeg`} 
+                            alt="Thumbnail"
+                            fill
+                            className="object-cover opacity-30 rounded-md"
+                        />
+                  )}
+
+                <p className="z-10">{id}</p>
                 <div className="project-links flex gap-1 absolute bottom-2 right-2">
-                    <button
-                        className="w-12 h-12 bg-zinc-800 flex justify-center items-center rounded-md hover:opacity-65 transition-opacity"
-                        onClick={() => window.open(website_url, '_blank')}
-                    >
-                        <svg xmlns="http://www.w3.org/2000/svg" width={27} height={27} viewBox="0 0 16 16">
-                            <path fill="currentColor" d="m8.878.392l5.25 3.045c.54.314.872.89.872 1.514v6.098a1.75 1.75 0 0 1-.872 1.514l-5.25 3.045a1.75 1.75 0 0 1-1.756 0l-5.25-3.045A1.75 1.75 0 0 1 1 11.049V4.951c0-.624.332-1.201.872-1.514L7.122.392a1.75 1.75 0 0 1 1.756 0M7.875 1.69l-4.63 2.685L8 7.133l4.755-2.758l-4.63-2.685a.25.25 0 0 0-.25 0M2.5 5.677v5.372c0 .09.047.171.125.216l4.625 2.683V8.432Zm6.25 8.271l4.625-2.683a.25.25 0 0 0 .125-.216V5.677L8.75 8.432Z">
-                            </path>
-                        </svg>
-                    </button>
-                    <button
-                        className="w-12 h-12 bg-zinc-800 flex justify-center items-center rounded-md hover:opacity-65 transition-opacity"
-                        onClick={() => source_url && window.open(source_url, '_blank')}
-                        disabled={!source_url}
-                    >
-                        <svg xmlns="http://www.w3.org/2000/svg" width={27} height={27} viewBox="0 0 24 24">
-                            <path fill="currentColor" d="M12 1C5.923 1 1 5.923 1 12c0 4.867 3.149 8.979 7.521 10.436c.55.096.756-.233.756-.522c0-.262-.013-1.128-.013-2.049c-2.764.509-3.479-.674-3.699-1.292c-.124-.317-.66-1.293-1.127-1.554c-.385-.207-.936-.715-.014-.729c.866-.014 1.485.797 1.691 1.128c.99 1.663 2.571 1.196 3.204.907c.096-.715.385-1.196.701-1.471c-2.448-.275-5.005-1.224-5.005-5.432c0-1.196.426-2.186 1.128-2.956c-.111-.275-.496-1.402.11-2.915c0 0 .921-.288 3.024 1.128a10.2 10.2 0 0 1 2.75-.371c.936 0 1.871.123 2.75.371c2.104-1.43 3.025-1.128 3.025-1.128c.605 1.513.221 2.64.111 2.915c.701.77 1.127 1.747 1.127 2.956c0 4.222-2.571 5.157-5.019 5.432c.399.344.743 1.004.743 2.035c0 1.471-.014 2.654-.014 3.025c0 .289.206.632.756.522C19.851 20.979 23 16.854 23 12c0-6.077-4.922-11-11-11">
-                            </path>
-                        </svg>
-                    </button>
+                    {website_url.length > 0 && (
+                        <button
+                            className="w-12 h-12 bg-zinc-800 flex justify-center items-center rounded-md hover:opacity-65 transition-opacity"
+                            onClick={() => window.open(website_url, '_blank')}
+                        >
+                            <svg xmlns="http://www.w3.org/2000/svg" width={27} height={27} viewBox="0 0 16 16">
+                                <path fill="currentColor" d="m8.878.392l5.25 3.045c.54.314.872.89.872 1.514v6.098a1.75 1.75 0 0 1-.872 1.514l-5.25 3.045a1.75 1.75 0 0 1-1.756 0l-5.25-3.045A1.75 1.75 0 0 1 1 11.049V4.951c0-.624.332-1.201.872-1.514L7.122.392a1.75 1.75 0 0 1 1.756 0M7.875 1.69l-4.63 2.685L8 7.133l4.755-2.758l-4.63-2.685a.25.25 0 0 0-.25 0M2.5 5.677v5.372c0 .09.047.171.125.216l4.625 2.683V8.432Zm6.25 8.271l4.625-2.683a.25.25 0 0 0 .125-.216V5.677L8.75 8.432Z">
+                                </path>
+                            </svg>
+                        </button>
+                    )}
+                    {source_url.length > 0 && (
+                        <button
+                            className="w-12 h-12 bg-zinc-800 flex justify-center items-center rounded-md hover:opacity-65 transition-opacity"
+                            onClick={() => source_url && window.open(source_url, '_blank')}
+                            disabled={!source_url}
+                        >
+                            <svg xmlns="http://www.w3.org/2000/svg" width={27} height={27} viewBox="0 0 24 24">
+                                <path fill="currentColor" d="M12 1C5.923 1 1 5.923 1 12c0 4.867 3.149 8.979 7.521 10.436c.55.096.756-.233.756-.522c0-.262-.013-1.128-.013-2.049c-2.764.509-3.479-.674-3.699-1.292c-.124-.317-.66-1.293-1.127-1.554c-.385-.207-.936-.715-.014-.729c.866-.014 1.485.797 1.691 1.128c.99 1.663 2.571 1.196 3.204.907c.096-.715.385-1.196.701-1.471c-2.448-.275-5.005-1.224-5.005-5.432c0-1.196.426-2.186 1.128-2.956c-.111-.275-.496-1.402.11-2.915c0 0 .921-.288 3.024 1.128a10.2 10.2 0 0 1 2.75-.371c.936 0 1.871.123 2.75.371c2.104-1.43 3.025-1.128 3.025-1.128c.605 1.513.221 2.64.111 2.915c.701.77 1.127 1.747 1.127 2.956c0 4.222-2.571 5.157-5.019 5.432c.399.344.743 1.004.743 2.035c0 1.471-.014 2.654-.014 3.025c0 .289.206.632.756.522C19.851 20.979 23 16.854 23 12c0-6.077-4.922-11-11-11">
+                                </path>
+                            </svg>
+                        </button>
+                    )}
+
                 </div>
             </div>
             <div className="mt-4 w-90 h-15 flex justify-center gap-2">
