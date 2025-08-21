@@ -9,8 +9,11 @@ import Support from "../components/Hero/Support";
 
 export default function Home() {
   // Callbacks 
-  const handlePL = useCallback(() => alert("Switched to Polish Version"), []);
-  const handleEN = useCallback(() => alert("Switched to International Version"), []);
+  const handlePlaceholder = useCallback(() => alert("Function not implemented on this time"), []);
+  const handleEN = handlePlaceholder;
+  const handlePL = handlePlaceholder;
+  // const handlePL = useCallback(() => alert("Switched to Polish Version"), []);
+  // const handleEN = useCallback(() => alert("Switched to International Version"), []);
 
   return (
     <div className="font-sans">
