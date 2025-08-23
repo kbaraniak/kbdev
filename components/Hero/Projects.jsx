@@ -9,7 +9,7 @@ export default function Projects() {
             </h2>
 
         {/* Right column: projects flex */}
-            <div className="mt-3 flex flex-wrap gap-x-[3px] gap-y-[11px] justify-center">
+            <div className="mt-3 min-w-[350px] flex flex-wrap gap-x-[3px] gap-y-[11px] justify-center">
                 <Box id="Odliczamydo.pl" thumbnail="odliczamydo-pl" website_url="https://odliczamydo.pl" stack={["html", "css", "js"]} />
                 <Box id="Klubuntu | Two Sides" thumbnail="klubuntu-eu-org" website_url="https://klubuntu.eu.org" source_url="https://github.com/Klubuntu/klubuntu.social" stack={["html", "css", "js"]} />
                 <Box id="OnerOS Web" thumbnail="oneros-web" website_url="https://oneros.in" source_url="https://github.com/orgs/OnerOS-Project/repositories" stack={["html", "css", "js", "react"]} />

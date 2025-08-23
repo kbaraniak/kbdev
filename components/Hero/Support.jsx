@@ -1,6 +1,6 @@
 export default function Support() {
     return (
-        <section className="mt-22 mb-10 grid gap-10 items-center" id="support">
+        <section className="mt-22 mb-10 min-w-[350px] grid gap-10 items-center" id="support">
             <h2 className="text-4xl font-bold text-center">
                 Support Me
             </h2>
