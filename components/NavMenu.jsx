@@ -147,7 +147,7 @@ export default function NavMenu({ defaultActive = 0 }) {
       </nav>
 
       {/* Mobile Hamburger */}
-      <div className="md:hidden w-[calc(100vw-50%)] min-w-[160px] z-[10] relative flex justify-center items-center p-4 bg-neutral-900 rounded-md">
+      <div className="md:hidden w-[calc(100vw-58%)] min-w-[160px] z-[10] relative flex justify-center items-center p-4 bg-neutral-900 rounded-md">
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
           className="text-white"
@@ -156,12 +156,14 @@ export default function NavMenu({ defaultActive = 0 }) {
         </button>
 
         {mobileOpen && (
-          <div className="absolute top-full left-0 w-full bg-neutral-900 flex flex-col items-center gap-2 p-4 shadow-lg">
+          <div className="absolute top-full left-1/2 -translate-x-1/2 mt-3 
+                  bg-neutral-900 flex flex-col items-center space-y-3 p-6 
+                  shadow-lg rounded-md w-screen max-w-[400px]">
             {menuItems.map((item, index) => (
               <button
                 key={index}
                 onClick={() => handleClick(index)}
-                className="w-full py-2 rounded-lg text-white hover:bg-neutral-800 transition-colors duration-200"
+                className="w-full max-w-[240px] py-3 px-6 rounded-lg text-white text-lg hover:bg-neutral-800 transition-colors duration-200"
               >
                 {item}
               </button>
@@ -169,6 +171,7 @@ export default function NavMenu({ defaultActive = 0 }) {
           </div>
         )}
       </div>
+
     </>
   );
 }
