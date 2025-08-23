@@ -1,8 +1,10 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
+import { Menu, X } from "lucide-react";
 
 export default function NavMenu({ defaultActive = 0 }) {
   const [active, setActive] = useState(defaultActive);
+  const [mobileOpen, setMobileOpen] = useState(false);
   const buttonsRef = useRef([]);
   const indicatorRef = useRef(null);
 
@@ -19,7 +21,6 @@ export default function NavMenu({ defaultActive = 0 }) {
 
   const menuItems = ["About Me", "Projects", "Collaboration", "Support"];
 
-  // Zamiana nazwy na id (bez spacji, małe litery)
   const toId = (str) => str.toLowerCase().replace(/\s+/g, "");
 
   const springAnim = (target, current, velocity, mass = 1, stiffness = 0.1, damping = 0.6) => {
@@ -110,12 +111,11 @@ export default function NavMenu({ defaultActive = 0 }) {
 
   const handleClick = (index) => {
     setActive(index);
+    setMobileOpen(false);
     if (index === 0) {
-      // Dla pierwszej pozycji scroll na górę i usunięcie hash z URL
       window.scrollTo({ top: 0, behavior: "smooth" });
       history.pushState(null, "", window.location.pathname);
     } else {
-      // Scroll do elementu z id odpowiadającym menuItems[index]
       const id = toId(menuItems[index]);
       const el = document.getElementById(id);
       if (el) {
@@ -126,22 +126,49 @@ export default function NavMenu({ defaultActive = 0 }) {
   };
 
   return (
-    <nav className="relative flex md:flex-row flex-col items-center gap-2 bg-neutral-900 p-2 rounded-full w-fit mx-auto">
-      <span
-        ref={indicatorRef}
-        className="absolute rounded-full md:border-white md:border-[3px]"
-        style={{ pointerEvents: "none", opacity: 1 }}
-      />
-      {menuItems.map((item, index) => (
+    <>
+      {/* Desktop Nav */}
+      <nav className="relative hidden md:flex items-center gap-2 bg-neutral-900 p-2 rounded-full w-fit mx-auto">
+        <span
+          ref={indicatorRef}
+          className="absolute rounded-full md:border-white md:border-[3px]"
+          style={{ pointerEvents: "none", opacity: 1 }}
+        />
+        {menuItems.map((item, index) => (
+          <button
+            key={index}
+            ref={(el) => (buttonsRef.current[index] = el)}
+            onClick={() => handleClick(index)}
+            className="px-4 py-2 rounded-full relative z-10 text-white hover:text-gray-200 transition-colors duration-200"
+          >
+            {item}
+          </button>
+        ))}
+      </nav>
+
+      {/* Mobile Hamburger */}
+      <div className="md:hidden w-[calc(100vw-50%)] min-w-[160px] z-[10] relative flex justify-center items-center p-4 bg-neutral-900 rounded-md">
         <button
-          key={index}
-          ref={(el) => (buttonsRef.current[index] = el)}
-          onClick={() => handleClick(index)}
-          className="px-4 py-2 rounded-full relative z-10 text-white hover:text-gray-200 transition-colors duration-200"
+          onClick={() => setMobileOpen(!mobileOpen)}
+          className="text-white"
         >
-          {item}
+          {mobileOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
-      ))}
-    </nav>
+
+        {mobileOpen && (
+          <div className="absolute top-full left-0 w-full bg-neutral-900 flex flex-col items-center gap-2 p-4 shadow-lg">
+            {menuItems.map((item, index) => (
+              <button
+                key={index}
+                onClick={() => handleClick(index)}
+                className="w-full py-2 rounded-lg text-white hover:bg-neutral-800 transition-colors duration-200"
+              >
+                {item}
+              </button>
+            ))}
+          </div>
+        )}
+      </div>
+    </>
   );
 }
