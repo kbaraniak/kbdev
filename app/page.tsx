@@ -17,7 +17,7 @@ export default function Home() {
 
   return (
     <div className="font-sans">
-      <div className="flex gap-[32px] row-start-2 items-center py-5 px-4">
+      <div className="flex justify-center gap-[32px] row-start-2 items-center py-5 px-4">
         <h2 className="text-4xl text-bold">kbdev</h2>
         <NavMenu />
         <p className="text-xl md:text-3xl select-none">

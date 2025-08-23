@@ -147,13 +147,13 @@ export default function NavMenu({ defaultActive = 0 }) {
       </nav>
 
       {/* Mobile Hamburger */}
-      <div className="md:hidden w-[calc(100vw-58%)] min-w-[160px] z-[10] relative flex justify-center items-center p-4 bg-neutral-900 rounded-md">
-        <button
-          onClick={() => setMobileOpen(!mobileOpen)}
+      <div className="md:hidden w-[calc(100vw-62%)] min-w-[160px] z-[10] relative flex justify-center items-center p-4 bg-neutral-900 rounded-md" 
+            onClick={() => setMobileOpen(!mobileOpen)}>
+        <div
           className="text-white"
         >
           {mobileOpen ? <X size={28} /> : <Menu size={28} />}
-        </button>
+        </div>
 
         {mobileOpen && (
           <div className="absolute top-full left-1/2 -translate-x-1/2 mt-3 
