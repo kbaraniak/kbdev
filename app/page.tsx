@@ -4,6 +4,7 @@ import { useCallback } from "react";
 import NavMenu from "../components/NavMenu";
 import AboutMe from "../components/Hero/AboutMe";
 import Projects from '../components/Hero/Projects';
+import WebsitesFrontend from '../components/Hero/WebsitesFrontend';
 import Collaboration from "../components/Hero/Collaboration";
 import Support from "../components/Hero/Support";
 
@@ -41,6 +42,7 @@ export default function Home() {
       <main className="mt-10">
         <AboutMe />
         <Projects />
+        <WebsitesFrontend />
         <Collaboration />
         <Support />
       </main>
