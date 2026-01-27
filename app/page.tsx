@@ -7,6 +7,7 @@ import Projects from '../components/Hero/Projects';
 import WebsitesFrontend from '../components/Hero/WebsitesFrontend';
 import Collaboration from "../components/Hero/Collaboration";
 import Support from "../components/Hero/Support";
+import ScrollToTop from "../components/ScrollToTop";
 
 export default function Home() {
   // Callbacks 
@@ -46,6 +47,7 @@ export default function Home() {
         <Collaboration />
         <Support />
       </main>
+      <ScrollToTop />
     </div>
   );
 }
