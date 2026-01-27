@@ -1,4 +1,11 @@
 # kbdev
 Remake from 2025 of my-portfolio
 
-Powered by next.js 15
+
+Stack:
+- next.js 15
+- tailwindcss (core)
+- animations (css)
+
+
+#### Optimized and automated making code by Claude Sonnet 4.5
