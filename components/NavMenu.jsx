@@ -176,7 +176,7 @@ export default function NavMenu({ defaultActive = 0 }) {
                     w-full py-3 px-4 rounded-lg text-left text-base font-medium
                     transition-all duration-200 smooth-transition
                     ${active === index 
-                      ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white shadow-lg' 
+                      ? 'bg-gradient-to-r from-red-900 to-red-700 text-white shadow-lg' 
                       : 'bg-neutral-800 text-gray-300 hover:bg-neutral-700 hover:text-white'
                     }
                   `}
