@@ -19,10 +19,10 @@ export default function Home() {
 
   return (
     <div className="font-sans">
-      <div className="flex justify-center gap-[32px] row-start-2 items-center py-5 px-4 animate-fade-in-down">
-        <h2 className="text-4xl text-bold text-white">kbdev</h2>
+      <header className="flex flex-wrap justify-center items-center gap-4 md:gap-8 py-5 px-4 animate-fade-in-down">
+        <h2 className="text-3xl md:text-4xl font-bold text-white">kbdev</h2>
         <NavMenu />
-        <p className="text-xl md:text-3xl select-none animate-fade-in-down delay-200">
+        <div className="text-lg md:text-xl select-none animate-fade-in-down delay-200">
           <button 
             onClick={handlePL} 
             className="hover:underline focus:outline-none smooth-transition hover-scale"
@@ -38,8 +38,8 @@ export default function Home() {
           >
             EN
           </button>
-        </p>
-      </div>
+        </div>
+      </header>
       <main className="mt-10">
         <AboutMe />
         <Projects />

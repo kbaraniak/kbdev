@@ -146,28 +146,55 @@ export default function NavMenu({ defaultActive = 0 }) {
         ))}
       </nav>
 
-      {/* Mobile Hamburger */}
-      <div className="md:hidden w-[calc(100vw-62%)] min-w-[160px] z-[10] relative flex justify-center items-center p-4 bg-neutral-900 rounded-md" 
-            onClick={() => setMobileOpen(!mobileOpen)}>
-        <div
-          className="text-white"
+      {/* Mobile Hamburger Container */}
+      <div className="md:hidden relative z-[100]">
+        <button 
+          className="relative flex justify-center items-center p-2 bg-neutral-900 rounded-md hover:bg-neutral-800 transition-colors cursor-pointer" 
+          onClick={() => setMobileOpen(!mobileOpen)}
+          aria-label="Toggle menu"
         >
-          {mobileOpen ? <X size={28} /> : <Menu size={28} />}
-        </div>
+          <div className="text-white">
+            {mobileOpen ? <X size={24} /> : <Menu size={24} />}
+          </div>
+        </button>
 
+        {/* Mobile Dropdown Menu */}
         {mobileOpen && (
-          <div className="absolute top-full left-1/2 -translate-x-1/2 mt-3 
-                  bg-neutral-900 flex flex-col items-center space-y-3 p-6 
-                  shadow-lg rounded-md w-screen max-w-[400px]">
-            {menuItems.map((item, index) => (
-              <button
-                key={index}
-                onClick={() => handleClick(index)}
-                className="w-full max-w-[240px] py-3 px-6 rounded-lg text-white text-lg hover:bg-neutral-800 transition-colors duration-200"
-              >
-                {item}
-              </button>
-            ))}
+          <div 
+            className="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-[90vw] max-w-sm bg-neutral-900 rounded-xl shadow-2xl p-6 border border-white/10 z-[100]"
+            style={{ 
+              animation: 'fadeIn 0.2s ease-out'
+            }}
+          >
+            {/* Menu Items */}
+            <nav className="flex flex-col space-y-3">
+              {menuItems.map((item, index) => (
+                <button
+                  key={index}
+                  onClick={() => handleClick(index)}
+                  className={`
+                    w-full py-3 px-4 rounded-lg text-left text-base font-medium
+                    transition-all duration-200 smooth-transition
+                    ${active === index 
+                      ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white shadow-lg' 
+                      : 'bg-neutral-800 text-gray-300 hover:bg-neutral-700 hover:text-white'
+                    }
+                  `}
+                >
+                  <div className="flex items-center justify-between">
+                    <span>{item}</span>
+                    <svg 
+                      className={`w-4 h-4 transition-transform ${active === index ? 'rotate-90' : ''}`}
+                      fill="none" 
+                      stroke="currentColor" 
+                      viewBox="0 0 24 24"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </div>
+                </button>
+              ))}
+            </nav>
           </div>
         )}
       </div>
