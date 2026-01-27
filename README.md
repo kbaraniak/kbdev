@@ -3,7 +3,7 @@ Remake from 2025 of my-portfolio
 
 
 Stack:
-- next.js 15
+- next.js 15-16
 - tailwindcss (core)
 - animations (css) - more on [Animations readme](ANIMATIONS_README.md)
 
