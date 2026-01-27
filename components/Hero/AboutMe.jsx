@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { ScrollReveal } from "../AnimationUtils";
 
 export default function AboutMe() {
