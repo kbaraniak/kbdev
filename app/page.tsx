@@ -9,14 +9,13 @@ import Collaboration from "../components/Hero/Collaboration";
 import Support from "../components/Hero/Support";
 import ScrollToTop from "../components/ScrollToTop";
 import Footer from "../components/Footer";
+import { useLanguage } from "../contexts/LanguageContext";
 
 export default function Home() {
-  // Callbacks 
-  const handlePlaceholder = useCallback(() => alert("Function not implemented on this time"), []);
-  const handleEN = handlePlaceholder;
-  const handlePL = handlePlaceholder;
-  // const handlePL = useCallback(() => alert("Switched to Polish Version"), []);
-  // const handleEN = useCallback(() => alert("Switched to International Version"), []);
+  const { language, setLanguage } = useLanguage();
+  
+  const handlePL = useCallback(() => setLanguage('pl_PL'), [setLanguage]);
+  const handleEN = useCallback(() => setLanguage('en_US'), [setLanguage]);
 
   return (
     <div className="font-sans">
@@ -33,7 +32,7 @@ export default function Home() {
         >
           <button 
             onClick={handlePL} 
-            className="px-4 py-2 rounded-md font-medium transition-all duration-300 hover:bg-white/10 focus:outline-none flex items-center gap-2"
+            className={`px-4 py-2 rounded-md font-medium transition-all duration-300 focus:outline-none flex items-center gap-2 ${language === 'pl_PL' ? 'bg-white/20' : 'hover:bg-white/10'}`}
             type="button"
           >
             <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -44,7 +43,7 @@ export default function Home() {
           </button>
           <button 
             onClick={handleEN} 
-            className="px-4 py-2 rounded-md font-medium transition-all duration-300 hover:bg-white/10 focus:outline-none flex items-center gap-2"
+            className={`px-4 py-2 rounded-md font-medium transition-all duration-300 focus:outline-none flex items-center gap-2 ${language === 'en_US' ? 'bg-white/20' : 'hover:bg-white/10'}`}
             type="button"
           >
             <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">

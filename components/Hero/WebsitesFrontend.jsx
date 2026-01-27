@@ -1,12 +1,15 @@
 import ProjectCard from "../Projects/ProjectCard"
 import { ScrollReveal } from "../AnimationUtils"
+import { useLanguage } from "../../contexts/LanguageContext";
 
 export default function WebsitesFrontend() {
+    const { t } = useLanguage();
+    
     return (
         <section className="mt-8 grid gap-10 items-center" id="websites-frontend">
             <ScrollReveal>
                 <h3 className="text-2xl text-center">
-                    Websites - Frontend
+                    {t.projects.subtitle}
                 </h3>
             </ScrollReveal>
 

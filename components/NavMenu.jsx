@@ -1,8 +1,10 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import { useLanguage } from "../contexts/LanguageContext";
 
 export default function NavMenu({ defaultActive = 0 }) {
+  const { t, language } = useLanguage();
   const [active, setActive] = useState(defaultActive);
   const [mobileOpen, setMobileOpen] = useState(false);
   const buttonsRef = useRef([]);
@@ -19,9 +21,12 @@ export default function NavMenu({ defaultActive = 0 }) {
     vh: 0,
   });
 
-  const menuItems = ["About Me", "Projects", "Collaboration", "Support"];
-
-  const toId = (str) => str.toLowerCase().replace(/\s+/g, "");
+  const menuItems = [
+    { label: t.nav.aboutMe, id: "aboutme" },
+    { label: t.nav.projects, id: "projects" },
+    { label: t.nav.collaboration, id: "collaboration" },
+    { label: t.nav.support, id: "support" }
+  ];
 
   const springAnim = (target, current, velocity, mass = 1, stiffness = 0.1, damping = 0.6) => {
     const force = -stiffness * (current - target);
@@ -107,7 +112,7 @@ export default function NavMenu({ defaultActive = 0 }) {
     animationFrameId = requestAnimationFrame(animate);
 
     return () => cancelAnimationFrame(animationFrameId);
-  }, [active]);
+  }, [active, language]);
 
   const handleClick = (index) => {
     setActive(index);
@@ -116,7 +121,7 @@ export default function NavMenu({ defaultActive = 0 }) {
       window.scrollTo({ top: 0, behavior: "smooth" });
       history.pushState(null, "", window.location.pathname);
     } else {
-      const id = toId(menuItems[index]);
+      const id = menuItems[index].id;
       const el = document.getElementById(id);
       if (el) {
         el.scrollIntoView({ behavior: "smooth" });
@@ -141,7 +146,7 @@ export default function NavMenu({ defaultActive = 0 }) {
             onClick={() => handleClick(index)}
             className="px-4 py-2 rounded-full relative z-10 text-white hover:text-gray-200 transition-colors duration-200"
           >
-            {item}
+            {item.label}
           </button>
         ))}
       </nav>
@@ -189,7 +194,7 @@ export default function NavMenu({ defaultActive = 0 }) {
                   `}
                 >
                   <div className="flex items-center justify-between">
-                    <span>{item}</span>
+                    <span>{item.label}</span>
                     <svg 
                       className={`w-4 h-4 transition-transform ${active === index ? 'rotate-90' : ''}`}
                       fill="none" 

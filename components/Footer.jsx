@@ -1,4 +1,7 @@
+import { useLanguage } from "../contexts/LanguageContext";
+
 export default function Footer() {
+  const { t } = useLanguage();
   const currentYear = new Date().getFullYear();
   
   return (
@@ -11,7 +14,7 @@ export default function Footer() {
       }}
     >
       <p className="text-gray-300 text-base">
-        &copy; 2025 - {currentYear} Copyright | Kamil B. (Klubuntu)
+        &copy; 2025 - {currentYear} {t.footer.copyright}
       </p>
     </footer>
   );

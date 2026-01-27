@@ -1,0 +1,59 @@
+{
+  "header": {
+    "logo": "kbdev"
+  },
+  "nav": {
+    "aboutMe": "About Me",
+    "projects": "Projects",
+    "collaboration": "Collaboration",
+    "support": "Support"
+  },
+  "aboutMe": {
+    "title": "About Me",
+    "greeting": "Hi, I'm Kamil.",
+    "age": "I'm 19 years old. My goal is to help others, and in the future, I plan to revolutionize the world.",
+    "passion": "I especially enjoy creating in frontend development (web apps), but sometimes backend work also brings me joy, mainly using Rust and Python."
+  },
+  "projects": {
+    "title": "My Projects",
+    "subtitle": "Websites - Frontend",
+    "viewWebsite": "Website",
+    "viewGithub": "GitHub"
+  },
+  "collaboration": {
+    "title": "Collaboration",
+    "klubuntu": {
+      "name": "Klubuntu",
+      "description": "Open Source Projects"
+    },
+    "puriDevs": {
+      "name": "Puri Devs",
+      "description": "Development Team"
+    },
+    "itvt": {
+      "name": "iTVT",
+      "description": "Interactive TV Platform"
+    }
+  },
+  "support": {
+    "title": "Support Me",
+    "discord": {
+      "name": "Discord Server",
+      "description": "Join our community"
+    },
+    "email": {
+      "name": "Contact me",
+      "description": "Send an email"
+    },
+    "patreon": {
+      "name": "Patreon",
+      "description": "Support my work"
+    }
+  },
+  "footer": {
+    "copyright": "Copyright | Kamil B (Klubuntu)"
+  },
+  "scrollToTop": {
+    "label": "Scroll to top"
+  }
+}

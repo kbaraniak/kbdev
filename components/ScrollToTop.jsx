@@ -6,7 +6,7 @@ export default function ScrollToTop() {
 
   useEffect(() => {
     const toggleVisibility = () => {
-      if (window.pageYOffset > 300) {
+      if (window.pageYOffset > 150) {
         setIsVisible(true)
       } else {
         setIsVisible(false)
@@ -30,7 +30,7 @@ export default function ScrollToTop() {
       {isVisible && (
         <button
           onClick={scrollToTop}
-          className="md:hidden fixed bottom-8 right-4 z-50 w-12 h-12 bg-gray-800 hover:bg-gray-700 text-white rounded-lg shadow-lg smooth-transition hover-scale cursor-pointer flex items-center justify-center animate-fade-in-up"
+          className="fixed bottom-8 right-4 z-50 bg-gray-800 hover:bg-gray-700 text-white rounded-lg shadow-lg smooth-transition hover-scale cursor-pointer flex items-center justify-center gap-2 animate-fade-in-up md:px-4 md:py-2 w-12 h-12 md:w-auto md:h-auto"
           style={{
             border: '1px solid rgba(255, 255, 255, 0.1)',
             boxShadow: '0 4px 12px rgba(0, 0, 0, 0.3)'
@@ -39,8 +39,8 @@ export default function ScrollToTop() {
         >
           <svg 
             xmlns="http://www.w3.org/2000/svg" 
-            width="24" 
-            height="24" 
+            width="20" 
+            height="20" 
             viewBox="0 0 24 24" 
             fill="none" 
             stroke="currentColor" 
@@ -50,6 +50,7 @@ export default function ScrollToTop() {
           >
             <polyline points="18 15 12 9 6 15"></polyline>
           </svg>
+          <span className="hidden md:inline font-medium">Top</span>
         </button>
       )}
     </>
