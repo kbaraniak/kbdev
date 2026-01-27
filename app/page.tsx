@@ -8,6 +8,7 @@ import WebsitesFrontend from '../components/Hero/WebsitesFrontend';
 import Collaboration from "../components/Hero/Collaboration";
 import Support from "../components/Hero/Support";
 import ScrollToTop from "../components/ScrollToTop";
+import Footer from "../components/Footer";
 
 export default function Home() {
   // Callbacks 
@@ -47,6 +48,7 @@ export default function Home() {
         <Collaboration />
         <Support />
       </main>
+      <Footer />
       <ScrollToTop />
     </div>
   );
