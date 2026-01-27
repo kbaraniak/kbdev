@@ -1,11 +1,18 @@
 'use client'
 import Image from "next/image"
+import { useHoverAnimation } from "../AnimationUtils"
 
 
 export default function Box({ id, thumbnail="", website_url, source_url = "", stack=[] }) {
+    const hoverRef = useHoverAnimation();
+    
     return (
-        <div className="mx-3 mb-6" id={`pr-${id.toLowerCase()}`}>
-            <div className="w-90 h-55 bg-slate-900 rounded-md flex justify-center items-center text-3xl relative">
+        <div className="mx-3 mb-6 stagger-item" id={`pr-${id.toLowerCase()}`}>
+            <div 
+                ref={hoverRef}
+                className="w-90 h-55 bg-slate-900 rounded-md flex justify-center items-center text-3xl relative smooth-transform hover-glow"
+                style={{background: 'rgba(15, 23, 42, 0.7)', border: '1px solid rgba(255, 255, 255, 0.05)'}}
+            >
                   {thumbnail.length > 0 && (
                     <Image 
                             src={`/img/thumbnails/${thumbnail}.jpeg`} 
@@ -19,7 +26,7 @@ export default function Box({ id, thumbnail="", website_url, source_url = "", st
                 <div className="project-links flex gap-1 absolute bottom-2 right-2">
                     {website_url.length > 0 && (
                         <button
-                            className="w-12 h-12 bg-zinc-800 flex justify-center items-center rounded-md hover:opacity-65 transition-opacity"
+                            className="w-12 h-12 bg-zinc-800 flex justify-center items-center rounded-md hover:opacity-65 transition-opacity hover-scale smooth-transition"
                             onClick={() => window.open(website_url, '_blank')}
                         >
                             <svg xmlns="http://www.w3.org/2000/svg" width={27} height={27} viewBox="0 0 16 16">
@@ -30,7 +37,7 @@ export default function Box({ id, thumbnail="", website_url, source_url = "", st
                     )}
                     {source_url.length > 0 && (
                         <button
-                            className="w-12 h-12 bg-zinc-800 flex justify-center items-center rounded-md hover:opacity-65 transition-opacity"
+                            className="w-12 h-12 bg-zinc-800 flex justify-center items-center rounded-md hover:opacity-65 transition-opacity hover-scale smooth-transition"
                             onClick={() => source_url && window.open(source_url, '_blank')}
                             disabled={!source_url}
                         >

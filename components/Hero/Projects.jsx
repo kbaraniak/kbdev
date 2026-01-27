@@ -1,12 +1,15 @@
 import Box from "../Projects/Box"
+import { ScrollReveal } from "../AnimationUtils"
 
 export default function Projects() {
     return (
         <section className="mt-22 grid gap-10 items-center" id="projects">
         {/* Left column: vertical heading */}
-            <h2 className="text-4xl font-bold text-center">
-                My Projects
-            </h2>
+            <ScrollReveal>
+                <h2 className="text-4xl font-bold text-center">
+                    My Projects
+                </h2>
+            </ScrollReveal>
 
         {/* Right column: projects flex */}
             <div className="mt-3 min-w-[350px] flex flex-wrap gap-x-[3px] gap-y-[11px] justify-center">

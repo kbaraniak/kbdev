@@ -17,13 +17,13 @@ export default function Home() {
 
   return (
     <div className="font-sans">
-      <div className="flex justify-center gap-[32px] row-start-2 items-center py-5 px-4">
-        <h2 className="text-4xl text-bold">kbdev</h2>
+      <div className="flex justify-center gap-[32px] row-start-2 items-center py-5 px-4 animate-fade-in-down">
+        <h2 className="text-4xl text-bold text-white">kbdev</h2>
         <NavMenu />
-        <p className="text-xl md:text-3xl select-none">
+        <p className="text-xl md:text-3xl select-none animate-fade-in-down delay-200">
           <button 
             onClick={handlePL} 
-            className="hover:underline focus:outline-none"
+            className="hover:underline focus:outline-none smooth-transition hover-scale"
             type="button"
           >
             PL
@@ -31,7 +31,7 @@ export default function Home() {
           <span className="text-gray-500 mx-2 select-none">|</span>
           <button 
             onClick={handleEN} 
-            className="hover:underline focus:outline-none"
+            className="hover:underline focus:outline-none smooth-transition hover-scale"
             type="button"
           >
             EN
