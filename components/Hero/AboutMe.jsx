@@ -8,7 +8,7 @@ export default function AboutMe() {
         <h2 className="text-4xl font-bold">About Me</h2>
       </ScrollReveal>
       <ScrollReveal delay={200}>
-        <div className="mt-3 flex flex-col md:flex-row items-center gap-6 p-6 rounded-lg max-w-4xl w-full relative z-0" style={{background: 'rgba(255, 255, 255, 0.03)', border: '1px solid rgba(255, 255, 255, 0.1)'}}>
+        <div className="mt-6 flex flex-col md:flex-row items-center gap-6 p-6 rounded-lg max-w-4xl w-full relative z-0" style={{background: 'rgba(255, 255, 255, 0.03)', border: '1px solid rgba(255, 255, 255, 0.1)'}}>
           <div className="w-[125px] h-[125px] min-w-[125px] md:w-[175px] md:h-[175px] md:min-w-[175px] relative z-0 rounded-full overflow-hidden bg-gray-500 flex items-center justify-center hover-scale">
             {/* Next.js Image with full size and rounded */}
             <Image
