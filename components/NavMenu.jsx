@@ -147,9 +147,9 @@ export default function NavMenu({ defaultActive = 0 }) {
       </nav>
 
       {/* Mobile Hamburger Container */}
-      <div className="md:hidden relative z-[100]">
+      <div className="md:hidden relative">
         <button 
-          className="relative flex justify-center items-center p-2 bg-neutral-900 rounded-md hover:bg-neutral-800 transition-colors cursor-pointer" 
+          className="relative flex justify-center items-center p-2 bg-neutral-900 rounded-md hover:bg-neutral-800 transition-colors cursor-pointer z-[9999]" 
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
         >
@@ -160,12 +160,19 @@ export default function NavMenu({ defaultActive = 0 }) {
 
         {/* Mobile Dropdown Menu */}
         {mobileOpen && (
-          <div 
-            className="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-[90vw] max-w-sm bg-neutral-900 rounded-xl shadow-2xl p-6 border border-white/10 z-[100]"
-            style={{ 
-              animation: 'fadeIn 0.2s ease-out'
-            }}
-          >
+          <>
+            {/* Invisible backdrop to catch clicks */}
+            <div 
+              className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[9998]"
+              onClick={() => setMobileOpen(false)}
+            />
+            
+            <div 
+              className="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-[90vw] max-w-sm bg-neutral-900 rounded-xl shadow-2xl p-6 border border-white/10 z-[9999]"
+              style={{ 
+                animation: 'fadeIn 0.2s ease-out'
+              }}
+            >
             {/* Menu Items */}
             <nav className="flex flex-col space-y-3">
               {menuItems.map((item, index) => (
@@ -196,6 +203,7 @@ export default function NavMenu({ defaultActive = 0 }) {
               ))}
             </nav>
           </div>
+          </>
         )}
       </div>
 

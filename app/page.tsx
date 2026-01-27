@@ -19,7 +19,7 @@ export default function Home() {
 
   return (
     <div className="font-sans">
-      <header className="flex flex-wrap justify-center items-center gap-4 md:gap-8 py-5 px-4 animate-fade-in-down">
+      <header className="relative z-[100000] flex flex-wrap justify-center items-center gap-4 md:gap-8 py-5 px-4 animate-fade-in-down">
         <h2 className="text-3xl md:text-4xl font-bold text-white">kbdev</h2>
         <NavMenu />
         <div className="text-lg md:text-xl select-none animate-fade-in-down delay-200">
