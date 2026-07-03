@@ -18,6 +18,9 @@ export default function WebsitesFrontend() {
                 <h3 className="text-2xl text-center">
                     {t.projects.subtitle}
                 </h3>
+                <p className="text-sm text-gray-500 text-center mt-1">
+                    {t.projects.clickHint}
+                </p>
             </ScrollReveal>
 
             <div className="mt-3 w-full flex flex-col items-center gap-3">
@@ -25,6 +28,11 @@ export default function WebsitesFrontend() {
                     id="Ba-Car" 
                     website_url="https://ba-car.pl" 
                     stack={["html", "css", "astro"]} 
+                />
+                <ProjectCard 
+                    id="iTVT (Poland)" 
+                    website_url="https://itvt.xyz" 
+                    stack={["html", "css", "vue"]} 
                 />
                 <ProjectCard 
                     id="Klubuntu | Two Sides" 

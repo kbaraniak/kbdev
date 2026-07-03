@@ -19,7 +19,8 @@
     "subtitle": "Websites - Frontend",
     "viewWebsite": "Website",
     "viewGithub": "GitHub",
-    "archiveLink": "Looking for more projects? See Archive →"
+    "archiveLink": "Looking for more projects? See Archive →",
+    "clickHint": "Click on a project name to open more details"
   },
   "collaboration": {
     "title": "Collaboration",

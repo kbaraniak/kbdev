@@ -19,7 +19,8 @@
     "subtitle": "Strony internetowe - Frontend",
     "viewWebsite": "Strona www",
     "viewGithub": "GitHub",
-    "archiveLink": "Szukasz więcej projektów? Zobacz Archiwum →"
+    "archiveLink": "Szukasz więcej projektów? Zobacz Archiwum →",
+    "clickHint": "Kliknij na nazwę projektu by otworzyć więcej szczegółów"
   },
   "collaboration": {
     "title": "Współpraca",
