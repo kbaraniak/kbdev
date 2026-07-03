@@ -1,10 +1,17 @@
 import ProjectCard from "../Projects/ProjectCard"
 import { ScrollReveal } from "../AnimationUtils"
 import { useLanguage } from "../../contexts/LanguageContext";
+import { useRouter } from "next/navigation";
 
 export default function WebsitesFrontend() {
-    const { t } = useLanguage();
-    
+    const { t, language } = useLanguage();
+    const router = useRouter();
+
+    const handleArchive = () => {
+        const url = language === 'pl_PL' ? '/archive' : '/en/archive';
+        router.push(url);
+    };
+
     return (
         <section className="mt-8 grid gap-10 items-center" id="websites-frontend">
             <ScrollReveal>
@@ -15,9 +22,9 @@ export default function WebsitesFrontend() {
 
             <div className="mt-3 w-full flex flex-col items-center gap-3">
                 <ProjectCard 
-                    id="Odliczamydo.pl" 
-                    website_url="https://odliczamydo.pl" 
-                    stack={["html", "css", "js"]} 
+                    id="Ba-Car" 
+                    website_url="https://ba-car.pl" 
+                    stack={["html", "css", "astro"]} 
                 />
                 <ProjectCard 
                     id="Klubuntu | Two Sides" 
@@ -31,45 +38,16 @@ export default function WebsitesFrontend() {
                     source_url="https://github.com/orgs/OnerOS-Project/repositories" 
                     stack={["html", "css", "js", "react"]} 
                 />
-                <ProjectCard 
-                    id="Chestdrop" 
-                    website_url="https://chestdrop.online" 
-                    stack={["react", "css", "js"]}
-                />
-                <ProjectCard 
-                    id="MVList" 
-                    website_url="https://archived-projects.kbdev.run/mvlist" 
-                    source_url="https://github.com/klubuntu-backup1/mvlist" 
-                    stack={["css", "js", "php"]} 
-                />
-                <ProjectCard 
-                    id="OneMyList" 
-                    website_url="https://archived-projects.kbdev.run/one-my-list" 
-                    stack={["css", "js", "php"]} 
-                />
-                <ProjectCard 
-                    id="Powrot RoxMb" 
-                    website_url="https://archived-projects.kbdev.run/events/powrotroxmb" 
-                    source_url="https://github.com/klubuntu-backup1/events-powrotroxmb" 
-                    stack={["html", "css", "js"]} 
-                />
-                <ProjectCard 
-                    id="Countdown Web" 
-                    website_url="https://archived-projects.kbdev.run/events/countdown" 
-                    source_url="https://github.com/klubuntu-backup1/events-odometer" 
-                    stack={["html", "css", "js"]} 
-                />
-                <ProjectCard 
-                    id="Reqqel.music" 
-                    website_url="https://archived-projects.kbdev.run/orders/reqqel-music" 
-                    stack={["html", "css", "js"]} 
-                />
-                <ProjectCard 
-                    id="Clouds network" 
-                    website_url="https://archived-projects.kbdev.run/puri-devs/clouds-network" 
-                    source_url="https://github.com/Puri-Devs/clouds-network-site" 
-                    stack={["html", "css", "js"]} 
-                />
+            </div>
+
+            <div className="text-center mt-6">
+                <button
+                    onClick={handleArchive}
+                    className="text-lg text-gray-400 hover:text-white transition-colors duration-200 cursor-pointer bg-none border-none"
+                    type="button"
+                >
+                    {t.projects.archiveLink}
+                </button>
             </div>
         </section>
     )
