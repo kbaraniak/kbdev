@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import { createContext, useContext, useState, useEffect, ReactNode, useCallback } from 'react';
 import enUS from '../json/lang/en_US.json';
 import plPL from '../json/lang/pl_PL.json';
 
@@ -19,51 +19,40 @@ const translations = {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
-const detectBrowserLanguage = (): Language => {
-  if (typeof window === 'undefined') return 'en_US';
-  
-  // Check localStorage first
+function getInitialLanguage(): Language {
+  if (typeof window === 'undefined') return 'pl_PL';
+  const path = window.location.pathname;
+  if (path === '/en' || path.startsWith('/en/')) return 'en_US';
+  if (path === '/' || path === '') return 'pl_PL';
   const stored = localStorage.getItem('language') as Language;
-  if (stored && (stored === 'en_US' || stored === 'pl_PL')) {
-    return stored;
-  }
-  
-  // Detect browser language
-  const browserLang = navigator.language || (navigator as any).userLanguage;
-  
-  // If Polish or from Poland region, use Polish
-  if (browserLang.startsWith('pl') || browserLang.includes('PL')) {
-    return 'pl_PL';
-  }
-  
-  // Default to English
-  return 'en_US';
-};
+  if (stored === 'en_US' || stored === 'pl_PL') return stored;
+  const browserLang = navigator.language || '';
+  return browserLang.startsWith('pl') ? 'pl_PL' : 'en_US';
+}
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguageState] = useState<Language>(() => {
-    if (typeof window === 'undefined') return 'en_US';
-    return detectBrowserLanguage();
-  });
+  const [language, setLanguageState] = useState<Language>('pl_PL');
 
   useEffect(() => {
-    const detected = detectBrowserLanguage();
-    if (detected !== language) {
-      setLanguageState(detected);
-    }
+    setLanguageState(getInitialLanguage());
   }, []);
 
-  const setLanguage = (lang: Language) => {
+  useEffect(() => {
+    const htmlLang = language === 'pl_PL' ? 'pl' : 'en';
+    document.documentElement.lang = htmlLang;
+    document.documentElement.setAttribute('aria-language', language);
+  }, [language]);
+
+  const setLanguage = useCallback((lang: Language) => {
     setLanguageState(lang);
-    if (typeof window !== 'undefined') {
-      localStorage.setItem('language', lang);
-      // Trigger fade animation
-      document.body.style.opacity = '0';
-      setTimeout(() => {
-        document.body.style.opacity = '1';
-      }, 150);
-    }
-  };
+    localStorage.setItem('language', lang);
+    const url = lang === 'pl_PL' ? '/' : '/en';
+    window.history.replaceState(null, '', url);
+    document.body.style.opacity = '0';
+    setTimeout(() => {
+      document.body.style.opacity = '1';
+    }, 150);
+  }, []);
 
   return (
     <LanguageContext.Provider value={{ language, setLanguage, t: translations[language] }}>

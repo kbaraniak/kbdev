@@ -119,13 +119,13 @@ export default function NavMenu({ defaultActive = 0 }) {
     setMobileOpen(false);
     if (index === 0) {
       window.scrollTo({ top: 0, behavior: "smooth" });
-      history.pushState(null, "", window.location.pathname);
+      history.replaceState(null, "", window.location.pathname);
     } else {
       const id = menuItems[index].id;
       const el = document.getElementById(id);
       if (el) {
         el.scrollIntoView({ behavior: "smooth" });
-        history.pushState(null, "", `#${id}`);
+        history.replaceState(null, "", `#${id}`);
       }
     }
   };

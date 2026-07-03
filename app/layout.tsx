@@ -24,7 +24,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="pl">
       <head>
         {/* Polyfills dla IE 11-12 */}
         <script dangerouslySetInnerHTML={{__html: `
