@@ -12,7 +12,7 @@
     "title": "About Me",
     "greeting": "Hi, I'm Kamil.",
     "age": "I'm 20 yo. My goal is to help others, and in the future, I plan to revolutionize the world.",
-    "passion": "I especially enjoy creating in frontend development (web apps), but sometimes backend work also brings me joy, mainly using Rust and Python."
+    "passion": "I create fast, modern websites and web applications with a focus on performance, SEO, and long-term maintainability."
   },
   "projects": {
     "title": "My Projects",
