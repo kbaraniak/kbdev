@@ -11,6 +11,8 @@ export default function ProjectCard({ id, website_url, source_url = "", stack=[]
             'js': 'bg-yellow-600',
             'typescript': 'bg-blue-600',
             'react': 'bg-cyan-500',
+            'astro': 'bg-pink-800',
+            'vue': 'bg-emerald-700',
             'php': 'bg-purple-600',
             'python': 'bg-yellow-600',
             'rust': 'bg-orange-700'
@@ -25,6 +27,8 @@ export default function ProjectCard({ id, website_url, source_url = "", stack=[]
             'js': 'JS',
             'typescript': 'TS',
             'react': 'React',
+            'astro': 'Astro',
+            'vue': 'Vue',
             'php': 'PHP',
             'python': 'Python',
             'rust': 'Rust'
