@@ -25,6 +25,10 @@ export default function ArchiveContent() {
 
   const handlePL = useCallback(() => setLanguage('pl_PL'), [setLanguage]);
   const handleEN = useCallback(() => setLanguage('en_US'), [setLanguage]);
+  const handleLogo = useCallback(() => {
+    const url = language === 'pl_PL' ? '/' : '/en';
+    router.push(url);
+  }, [language, router]);
 
   const handleBack = useCallback(() => {
     const url = language === 'pl_PL' ? '/' : '/en';
@@ -34,7 +38,9 @@ export default function ArchiveContent() {
   return (
     <div className="font-sans">
       <header className="relative z-[100000] flex flex-wrap justify-center items-center gap-4 md:gap-8 py-5 px-4 animate-fade-in-down">
-        <h2 className="text-3xl md:text-4xl font-bold text-white">kbdev</h2>
+        <button onClick={handleLogo} className="bg-none border-none cursor-pointer" type="button">
+          <h2 className="text-3xl md:text-4xl font-bold text-white">kbdev</h2>
+        </button>
         <NavMenu />
         <div 
           className="flex items-center gap-1 p-1 rounded-lg animate-fade-in-down delay-200"

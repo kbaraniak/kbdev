@@ -55,6 +55,242 @@
   "footer": {
     "copyright": "Copyright | Kamil B"
   },
+  "caseStudies": {
+    "bacar": {
+      "title": "Ba-Car – Professional Website for a Detailing Company",
+      "challenges": "Challenges",
+      "challengesList": [
+        "The company hadn't had a website for many years",
+        "Search engine optimization (SEO)",
+        "Lightweight page (fast loading)",
+        "Easy future editing and expansion",
+        "Clear presentation of services and portfolio"
+      ],
+      "achievements": "Achievements",
+      "achievementsList": [
+        "24h after publication: CTR rate of 14%",
+        "Lighthouse: Performance 98, Accessibility 99, Best Practices 100, SEO 100",
+        "Seoptimer score A-",
+        "Site ranking for selected keywords",
+        "Fully responsive design across all devices"
+      ],
+      "backToProjects": "← Back to projects"
+    },
+    "klubuntu": {
+      "title": "Klubuntu | Two Sides – Bilingual Community Website",
+      "challenges": "Challenges",
+      "challengesList": [
+        "Fully bilingual site (PL/EN) while maintaining consistency",
+        "Presenting two perspectives: user and developer",
+        "Modern design with smooth animations",
+        "Integration of gallery and social media links",
+        "Lightweight and fast one-page website"
+      ],
+      "achievements": "Achievements",
+      "achievementsList": [
+        "Fully responsive design across all devices",
+        "Smooth animations and section transitions",
+        "Clear separation of user and developer zones",
+        "Lighthouse performance score of 95+",
+        "Easy future expansion with new sections"
+      ],
+      "backToProjects": "← Back to projects"
+    },
+    "oneros": {
+      "title": "OnerOS Web – Website for the Operating System of the Future",
+      "challenges": "Challenges",
+      "challengesList": [
+        "Presenting a complex operating system in an accessible way",
+        "Managing multiple versions and download files",
+        "Cross-platform compatibility and responsiveness",
+        "Modern, futuristic design",
+        "Integration with GitHub and support system"
+      ],
+      "achievements": "Achievements",
+      "achievementsList": [
+        "Clean and modern user interface",
+        "Fully responsive across all devices",
+        "Web preview integration – online testing capability",
+        "Clear download and version management system",
+        "Performance and fast loading times"
+      ],
+      "backToProjects": "← Back to projects"
+    },
+    "itvt": {
+      "title": "iTVT – Interactive TV Platform",
+      "challenges": "Challenges",
+      "challengesList": [
+        "Building an application ecosystem (web, mobile, desktop)",
+        "Integrating VOD and live broadcasts",
+        "Consistent branding and experience across multiple platforms",
+        "Development in an open source model",
+        "Modern technology stack"
+      ],
+      "achievements": "Achievements",
+      "achievementsList": [
+        "Ecosystem of 10+ open source repositories",
+        "Applications for web, mobile, and desktop",
+        "VOD platform with live broadcasts",
+        "Modern stack: TypeScript, Vue, Tauri",
+        "Community built around an open project"
+      ],
+      "backToProjects": "← Back to projects"
+    },
+    "odliczamydo": {
+      "title": "Odliczamydo.pl – Countdown Timer Website",
+      "challenges": "Challenges",
+      "challengesList": [
+        "Real-time countdown timer functionality",
+        "Clean and aesthetic user interface",
+        "Performance with multiple simultaneous countdowns",
+        "SEO and search engine positioning"
+      ],
+      "achievements": "Achievements",
+      "achievementsList": [
+        "Working real-time countdown functionality",
+        "Clean and simple interface",
+        "Lightweight and fast page",
+        "Responsive across all devices"
+      ],
+      "backToProjects": "← Back to projects"
+    },
+    "chestdrop": {
+      "title": "Chestdrop – CS:GO Style or Wheel of Fortune Draw",
+      "challenges": "Challenges",
+      "challengesList": [
+        "Draw system with configurable chances and weights",
+        "Multiple draw modes: CS:GO style, wheel of fortune",
+        "Secure and fair result generation",
+        "Modern user interface with animations",
+        "Performance with high concurrent draw volume"
+      ],
+      "achievements": "Achievements",
+      "achievementsList": [
+        "Draw system with customizable weights and probabilities",
+        "Multiple visual draw modes",
+        "Clean and modern design with smooth animations",
+        "Fully responsive website",
+        "Probability management system integration"
+      ],
+      "backToProjects": "← Back to projects"
+    },
+    "mvlist": {
+      "title": "MVList – Minecraft Verified List (Server Directory)",
+      "challenges": "Challenges",
+      "challengesList": [
+        "Admin verification system with Captcha",
+        "Discord Webhook integration for link confirmation",
+        "Listing Minecraft servers without sponsored results",
+        "Security and spam protection",
+        "Clean interface for browsing servers"
+      ],
+      "achievements": "Achievements",
+      "achievementsList": [
+        "Admin verification system with Captcha",
+        "Automatic notifications via Discord Webhook",
+        "Unsponsored server listing",
+        "Secure add and verify process",
+        "Responsive user interface"
+      ],
+      "backToProjects": "← Back to projects"
+    },
+    "onemylist": {
+      "title": "OneMyList – Notes App with Editor and Themes",
+      "challenges": "Challenges",
+      "challengesList": [
+        "Rich text editor powered by CKEditor 5",
+        "22 note colors with on-the-fly switching",
+        "Light and dark theme (dark mode)",
+        "Note save/load system via PHP API",
+        "Typewriter loading animation"
+      ],
+      "achievements": "Achievements",
+      "achievementsList": [
+        "Fully functional rich text editor",
+        "Palette of 22 note background colors",
+        "Smooth theme switching with preference persistence",
+        "Automatic system theme detection",
+        "Responsive interface"
+      ],
+      "backToProjects": "← Back to projects"
+    },
+    "powrot-roxmb": {
+      "title": "Powrót RoxMb – Countdown to a Special Event",
+      "challenges": "Challenges",
+      "challengesList": [
+        "Time-limited event website",
+        "Conveying a nostalgic atmosphere",
+        "Countdown timer and event information",
+        "Embedded YouTube player with autoplay as page background",
+        "Lightweight and fast page"
+      ],
+      "achievements": "Achievements",
+      "achievementsList": [
+        "Unique, nostalgic design",
+        "Countdown timer to the event",
+        "YouTube background player with automatic playback",
+        "All information in one place",
+        "Performance and fast loading"
+      ],
+      "backToProjects": "← Back to projects"
+    },
+    "countdown-web": {
+      "title": "Countdown Web – Advanced Online Countdown",
+      "challenges": "Challenges",
+      "challengesList": [
+        "Precise time countdown",
+        "Multiple simultaneous timers",
+        "Customizable countdown appearance",
+        "Responsiveness across devices"
+      ],
+      "achievements": "Achievements",
+      "achievementsList": [
+        "Precise countdown to the second",
+        "Multiple independent timers",
+        "Appearance customization",
+        "Lightweight and efficient application"
+      ],
+      "backToProjects": "← Back to projects"
+    },
+    "reqqel-music": {
+      "title": "Reqqel – Bio Page with Social Links",
+      "challenges": "Challenges",
+      "challengesList": [
+        "Bio-style page linking to music profiles",
+        "Integration with Spotify, Soundcloud, TikTok, YouTube",
+        "Clean and aesthetic link layout",
+        "Lightweight and fast page"
+      ],
+      "achievements": "Achievements",
+      "achievementsList": [
+        "Central hub for all music platform links",
+        "Integration with major music platforms",
+        "Clean and modern design",
+        "Fast loading and full responsiveness"
+      ],
+      "backToProjects": "← Back to projects"
+    },
+    "clouds-network": {
+      "title": "Cloud Networks – VPS Hosting Website",
+      "challenges": "Challenges",
+      "challengesList": [
+        "Presenting VPS hosting plans with multiple packages",
+        "User registration and login system",
+        "Responsive design for a hosting platform",
+        "Displaying customer reviews and ratings",
+        "Lightweight and fast page"
+      ],
+      "achievements": "Achievements",
+      "achievementsList": [
+        "Clear VM package presentation with pricing",
+        "Registration and client panel system",
+        "Customer review integration",
+        "Responsive design for all devices",
+        "Fast page loading"
+      ],
+      "backToProjects": "← Back to projects"
+    }
+  },
   "archive": {
     "title": "Projects Archive"
   },

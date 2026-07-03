@@ -1,10 +1,12 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import { useRouter } from "next/navigation";
 import { useLanguage } from "../contexts/LanguageContext";
 
 export default function NavMenu({ defaultActive = 0 }) {
   const { t, language } = useLanguage();
+  const router = useRouter();
   const [active, setActive] = useState(defaultActive);
   const [mobileOpen, setMobileOpen] = useState(false);
   const buttonsRef = useRef([]);
@@ -126,6 +128,9 @@ export default function NavMenu({ defaultActive = 0 }) {
       if (el) {
         el.scrollIntoView({ behavior: "smooth" });
         history.replaceState(null, "", `#${id}`);
+      } else {
+        const prefix = language === 'pl_PL' ? '' : '/en';
+        router.push(`${prefix}/#${id}`);
       }
     }
   };

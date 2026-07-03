@@ -55,6 +55,242 @@
   "footer": {
     "copyright": "Wszelkie prawa zastrzeżone | Kamil B"
   },
+  "caseStudies": {
+    "bacar": {
+      "title": "Ba-Car – Profesjonalna Strona dla Firmy Detailingowej",
+      "challenges": "Wyzwania",
+      "challengesList": [
+        "Firma nie miała strony internetowej od wielu lat",
+        "Pozycjonowanie strony (SEO)",
+        "Lekka strona (szybkie ładowanie)",
+        "Łatwość w przyszłej edycji i rozbudowie",
+        "Przejrzysta prezentacja usług i portfolio"
+      ],
+      "achievements": "Osiągnięcia",
+      "achievementsList": [
+        "Po 24h od publikacji wskaźnik CTR na poziomie 14%",
+        "Lighthouse: Performance 98, Accessibility 99, Best Practices 100, SEO 100",
+        "Seoptimer z wynikiem A-",
+        "Strona dostępna po wybranych słowach kluczowych",
+        "W pełni responsywny design na wszystkich urządzeniach"
+      ],
+      "backToProjects": "← Powrót do projektów"
+    },
+    "klubuntu": {
+      "title": "Klubuntu | Two Sides – Dwujęzyczna Strona Społeczności",
+      "challenges": "Wyzwania",
+      "challengesList": [
+        "Strona w pełni dwujęzyczna (PL/EN) z zachowaniem spójności",
+        "Przedstawienie dwóch perspektyw: użytkownika i dewelopera",
+        "Nowoczesny design z płynnymi animacjami",
+        "Integracja galerii i linków społecznościowych",
+        "Lekka i szybka strona typu one-page"
+      ],
+      "achievements": "Osiągnięcia",
+      "achievementsList": [
+        "W pełni responsywny design na wszystkich urządzeniach",
+        "Płynne animacje i przejścia między sekcjami",
+        "Przejrzysty podział na strefę użytkownika i dewelopera",
+        "Wydajność Lighthouse na poziomie 95+",
+        "Łatwość w przyszłej rozbudowie o nowe sekcje"
+      ],
+      "backToProjects": "← Powrót do projektów"
+    },
+    "oneros": {
+      "title": "OnerOS Web – Strona Systemu Operacyjnego Przyszłości",
+      "challenges": "Wyzwania",
+      "challengesList": [
+        "Prezentacja złożonego systemu operacyjnego w przystępny sposób",
+        "Zarządzanie wieloma wersjami i plikami do pobrania",
+        "Wieloplatformowość i responsywność",
+        "Nowoczesny, futurystyczny design",
+        "Integracja z GitHub i systemem wsparcia"
+      ],
+      "achievements": "Osiągnięcia",
+      "achievementsList": [
+        "Czysty i nowoczesny interfejs użytkownika",
+        "W pełni responsywny na wszystkich urządzeniach",
+        "Integracja z web preview – możliwość testowania online",
+        "Przejrzysty system pobierania i zarządzania wersjami",
+        "Wydajność i szybkość ładowania"
+      ],
+      "backToProjects": "← Powrót do projektów"
+    },
+    "itvt": {
+      "title": "iTVT – Interaktywna Platforma Telewizyjna",
+      "challenges": "Wyzwania",
+      "challengesList": [
+        "Budowa ekosystemu aplikacji (web, mobile, desktop)",
+        "Integracja VOD i transmisji na żywo",
+        "Spójny branding i doświadczenie na wielu platformach",
+        "Rozwój w modelu open source",
+        "Nowoczesny stack technologiczny"
+      ],
+      "achievements": "Osiągnięcia",
+      "achievementsList": [
+        "Ekosystem 10+ repozytoriów open source",
+        "Aplikacje na web, mobile i desktop",
+        "Platforma VOD z transmisjami na żywo",
+        "Nowoczesny stack: TypeScript, Vue, Tauri",
+        "Społeczność skupiona wokół otwartego projektu"
+      ],
+      "backToProjects": "← Powrót do projektów"
+    },
+    "odliczamydo": {
+      "title": "Odliczamydo.pl – Strona z Odliczeniami Czasu",
+      "challenges": "Wyzwania",
+      "challengesList": [
+        "Dynamiczne odliczanie czasu w czasie rzeczywistym",
+        "Przejrzysty i estetyczny interfejs użytkownika",
+        "Wydajność przy wielu jednoczesnych odliczeniach",
+        "SEO i pozycjonowanie strony"
+      ],
+      "achievements": "Osiągnięcia",
+      "achievementsList": [
+        "Działające odliczanie w czasie rzeczywistym",
+        "Czytelny i prosty interfejs",
+        "Lekka i szybka strona",
+        "Responsywność na wszystkich urządzeniach"
+      ],
+      "backToProjects": "← Powrót do projektów"
+    },
+    "chestdrop": {
+      "title": "Chestdrop – Losowanie w Stylu CS:GO czy Koła Fortuny",
+      "challenges": "Wyzwania",
+      "challengesList": [
+        "System losowań z możliwością ustawienia szans i wag",
+        "Wiele trybów losowania: CS:GO style, koło fortuny",
+        "Bezpieczne i uczciwe generowanie wyników",
+        "Nowoczesny interfejs użytkownika z animacjami",
+        "Wydajność przy dużej liczbie jednoczesnych losowań"
+      ],
+      "achievements": "Osiągnięcia",
+      "achievementsList": [
+        "System losowań z konfigurowalnymi wagami i szansami",
+        "Wiele trybów wizualnych losowania",
+        "Czysty i nowoczesny design z płynnymi animacjami",
+        "W pełni responsywna strona",
+        "Integracja z systemem zarządzania prawdopodobieństwem"
+      ],
+      "backToProjects": "← Powrót do projektów"
+    },
+    "mvlist": {
+      "title": "MVList – Minecraft Verified List (Lista Serwerów)",
+      "challenges": "Wyzwania",
+      "challengesList": [
+        "System weryfikacji serwerów przez adminów z Captcha",
+        "Integracja z Discord Webhook do potwierdzania linków",
+        "Listowanie serwerów Minecraft bez sponsorowania",
+        "Bezpieczeństwo i ochrona przed spamem",
+        "Przejrzysty interfejs do przeglądania serwerów"
+      ],
+      "achievements": "Osiągnięcia",
+      "achievementsList": [
+        "System weryfikacji adminów z Captcha",
+        "Automatyczne powiadomienia przez Discord Webhook",
+        "Lista serwerów bez sponsorowanych wyników",
+        "Bezpieczny proces dodawania i weryfikacji",
+        "Responsywny interfejs użytkownika"
+      ],
+      "backToProjects": "← Powrót do projektów"
+    },
+    "onemylist": {
+      "title": "OneMyList – Aplikacja do Notatek z Edytorem i Motywami",
+      "challenges": "Wyzwania",
+      "challengesList": [
+        "Edytor tekstu rich text z CKEditor 5",
+        "22 kolory notatek z możliwością zmiany",
+        "Motyw jasny i ciemny (dark mode)",
+        "System zapisu i odczytu notatek przez API PHP",
+        "Animacja ładowania z typewriterem"
+      ],
+      "achievements": "Osiągnięcia",
+      "achievementsList": [
+        "W pełni funkcjonalny edytor rich text",
+        "Paleta 22 kolorów tła notatki",
+        "Płynne przełączanie motywu z zapamiętywaniem preferencji",
+        "Automatyczne dostosowanie do motywu systemowego",
+        "Responsywny interfejs"
+      ],
+      "backToProjects": "← Powrót do projektów"
+    },
+    "powrot-roxmb": {
+      "title": "Powrót RoxMb – Odliczanie do Specjalnego Wydarzenia",
+      "challenges": "Wyzwania",
+      "challengesList": [
+        "Strona z ograniczonym czasowo wydarzeniem",
+        "Przekazanie nostalgicznego klimatu",
+        "Licznik czasu i informacje o wydarzeniu",
+        "Osadzony player YouTube z auto play jako tło strony",
+        "Lekka i szybka strona"
+      ],
+      "achievements": "Osiągnięcia",
+      "achievementsList": [
+        "Unikalny, nostalgiczny design",
+        "Licznik czasu odliczający do wydarzenia",
+        "Player YouTube w tle z automatycznym odtwarzaniem",
+        "Wszystkie informacje w jednym miejscu",
+        "Wydajność i szybkie ładowanie"
+      ],
+      "backToProjects": "← Powrót do projektów"
+    },
+    "countdown-web": {
+      "title": "Countdown Web – Zaawansowane Odliczanie Online",
+      "challenges": "Wyzwania",
+      "challengesList": [
+        "Precyzyjne odliczanie czasu",
+        "Wiele równoczesnych timerów",
+        "Konfigurowalny wygląd odliczania",
+        "Responsywność na różnych urządzeniach"
+      ],
+      "achievements": "Osiągnięcia",
+      "achievementsList": [
+        "Precyzyjne odliczanie do sekund",
+        "Wiele niezależnych timerów",
+        "Personalizacja wyglądu",
+        "Lekka i wydajna aplikacja"
+      ],
+      "backToProjects": "← Powrót do projektów"
+    },
+    "reqqel-music": {
+      "title": "Reqqel – Strona Bio z Linkami Społecznościowymi",
+      "challenges": "Wyzwania",
+      "challengesList": [
+        "Strona typu bio z linkami do profili muzycznych",
+        "Integracja z Spotify, Soundcloud, TikTok, YouTube",
+        "Przejrzysty i estetyczny układ linków",
+        "Lekka i szybka strona"
+      ],
+      "achievements": "Osiągnięcia",
+      "achievementsList": [
+        "Centralne miejsce z wszystkimi linkami muzycznymi",
+        "Integracja z najpopularniejszymi platformami",
+        "Czytelny i nowoczesny design",
+        "Szybkie ładowanie i responsywność"
+      ],
+      "backToProjects": "← Powrót do projektów"
+    },
+    "clouds-network": {
+      "title": "Cloud Networks – Strona Hostingu VPS",
+      "challenges": "Wyzwania",
+      "challengesList": [
+        "Prezentacja oferty hostingowej VPS z wieloma pakietami",
+        "System rejestracji i logowania użytkowników",
+        "Responsywny design dla platformy CSP",
+        "Przejrzyste opinie i recenzje klientów",
+        "Lekka i szybka strona"
+      ],
+      "achievements": "Osiągnięcia",
+      "achievementsList": [
+        "Czytelna prezentacja pakietów VM z cenami",
+        "System rejestracji i panelu klienta",
+        "Integracja z opiniami klientów",
+        "Responsywny design na wszystkie urządzenia",
+        "Szybkie ładowanie strony"
+      ],
+      "backToProjects": "← Powrót do projektów"
+    }
+  },
   "archive": {
     "title": "Archiwum Projektów"
   },

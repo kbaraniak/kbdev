@@ -1,8 +1,25 @@
 'use client'
+import { useRouter } from "next/navigation";
 import { useLanguage } from "../../contexts/LanguageContext";
 
+const caseStudySlugs = {
+    'Ba-Car': 'bacar',
+    'Klubuntu | Two Sides': 'klubuntu',
+    'OnerOS Web': 'oneros',
+    'iTVT (Poland)': 'itvt',
+    'Odliczamydo.pl': 'odliczamydo',
+    'Chestdrop': 'chestdrop',
+    'MVList': 'mvlist',
+    'OneMyList': 'onemylist',
+    'Powrot RoxMb': 'powrot-roxmb',
+    'Countdown Web': 'countdown-web',
+    'Reqqel.music': 'reqqel-music',
+    'Clouds network': 'clouds-network',
+};
+
 export default function ProjectCard({ id, website_url, source_url = "", stack=[] }) {
-    const { t } = useLanguage();
+    const { t, language } = useLanguage();
+    const router = useRouter();
 
     const getStackColor = (tech) => {
         const colors = {
@@ -143,7 +160,20 @@ export default function ProjectCard({ id, website_url, source_url = "", stack=[]
 
                 {/* Project Name */}
                 <div className="flex-grow min-w-[200px]">
-                    <h3 className="text-xl font-semibold text-white">{id}</h3>
+                    {caseStudySlugs[id] ? (
+                        <button
+                            onClick={() => {
+                                const prefix = language === 'pl_PL' ? '' : '/en';
+                                router.push(`${prefix}/project/${caseStudySlugs[id]}`);
+                            }}
+                            className="text-xl font-semibold text-white hover:text-gray-300 transition-colors duration-200 cursor-pointer bg-none border-none text-left"
+                            type="button"
+                        >
+                            {id}
+                        </button>
+                    ) : (
+                        <h3 className="text-xl font-semibold text-white">{id}</h3>
+                    )}
                 </div>
 
                 {/* Stack Tags */}
