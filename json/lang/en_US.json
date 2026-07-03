@@ -18,7 +18,8 @@
     "title": "My Projects",
     "subtitle": "Websites - Frontend",
     "viewWebsite": "Website",
-    "viewGithub": "GitHub"
+    "viewGithub": "GitHub",
+    "archiveLink": "Looking for more projects? See Archive →"
   },
   "collaboration": {
     "title": "Collaboration",
@@ -51,7 +52,10 @@
     }
   },
   "footer": {
-    "copyright": "Copyright | Kamil B (Klubuntu)"
+    "copyright": "Copyright | Kamil B"
+  },
+  "archive": {
+    "title": "Projects Archive"
   },
   "scrollToTop": {
     "label": "Scroll to top"

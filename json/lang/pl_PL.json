@@ -18,7 +18,8 @@
     "title": "Moje Projekty",
     "subtitle": "Strony internetowe - Frontend",
     "viewWebsite": "Strona www",
-    "viewGithub": "GitHub"
+    "viewGithub": "GitHub",
+    "archiveLink": "Szukasz więcej projektów? Zobacz Archiwum →"
   },
   "collaboration": {
     "title": "Współpraca",
@@ -51,7 +52,10 @@
     }
   },
   "footer": {
-    "copyright": "Wszelkie prawa zastrzeżone | Kamil B (Klubuntu)"
+    "copyright": "Wszelkie prawa zastrzeżone | Kamil B"
+  },
+  "archive": {
+    "title": "Archiwum Projektów"
   },
   "scrollToTop": {
     "label": "Przewiń do góry"
