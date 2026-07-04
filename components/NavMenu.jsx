@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import { useLanguage } from "../contexts/LanguageContext";
 
 export default function NavMenu({ defaultActive = 0 }) {
-  const { t, language } = useLanguage();
+  const { t, language, noAnim } = useLanguage();
   const router = useRouter();
   const [active, setActive] = useState(defaultActive);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -40,6 +40,7 @@ export default function NavMenu({ defaultActive = 0 }) {
   };
 
   useEffect(() => {
+    if (noAnim) return;
     const targetBtn = buttonsRef.current[active];
     const indicator = indicatorRef.current;
     if (!targetBtn || !indicator) return;
@@ -114,7 +115,7 @@ export default function NavMenu({ defaultActive = 0 }) {
     animationFrameId = requestAnimationFrame(animate);
 
     return () => cancelAnimationFrame(animationFrameId);
-  }, [active, language]);
+  }, [active, language, noAnim]);
 
   const handleClick = (index) => {
     setActive(index);
@@ -142,7 +143,7 @@ export default function NavMenu({ defaultActive = 0 }) {
         <span
           ref={indicatorRef}
           className="absolute rounded-full md:border-white md:border-[3px]"
-          style={{ pointerEvents: "none", opacity: 1 }}
+          style={{ pointerEvents: "none", opacity: noAnim ? 0 : 1 }}
         />
         {menuItems.map((item, index) => (
           <button
@@ -178,8 +179,9 @@ export default function NavMenu({ defaultActive = 0 }) {
             />
             
             <div 
-              className="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-[90vw] max-w-sm bg-neutral-900 rounded-xl shadow-2xl p-6 border border-white/10 z-[9999]"
+               className="fixed top-16 mt-2 w-[95vw] max-w-lg bg-neutral-900 rounded-xl shadow-2xl p-6 border border-white/10 z-[9999]"
               style={{ 
+                left: '2.5vw',
                 animation: 'fadeIn 0.2s ease-out'
               }}
             >

@@ -24,30 +24,37 @@ body.no-animations,
 body.no-animations *,
 body.no-animations *::before,
 body.no-animations *::after {
+  -webkit-animation: none !important;
   animation: none !important;
+  -webkit-transition: none !important;
   transition: none !important;
 }
 
 body.no-animations .scroll-reveal {
   opacity: 1 !important;
+  -webkit-transform: none !important;
   transform: none !important;
 }
 
-/* Animowane tło gradientowe */
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle at 20% 50%, rgba(102, 126, 234, 0.1) 0%, transparent 50%),
-              radial-gradient(circle at 80% 80%, rgba(237, 100, 166, 0.1) 0%, transparent 50%),
-              radial-gradient(circle at 40% 10%, rgba(35, 213, 171, 0.08) 0%, transparent 50%);
-  z-index: -1;
-  pointer-events: none;
-  -webkit-animation: gradientShift 20s ease infinite;
-  animation: gradientShift 20s ease infinite;
+body.no-animations .animate-fade-in-up,
+body.no-animations .animate-fade-in-down,
+body.no-animations .animate-fade-in-left,
+body.no-animations .animate-fade-in-right,
+body.no-animations .animate-scale-in,
+body.no-animations .stagger-item {
+  opacity: 1 !important;
+  -webkit-transform: none !important;
+  transform: none !important;
+}
+
+body.no-animations::before {
+  -webkit-animation: none !important;
+  animation: none !important;
+}
+
+body.no-animations,
+body.no-animations html {
+  scroll-behavior: auto !important;
 }
 
 /* Smooth scroll dla całej strony */
@@ -55,7 +62,6 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Fallback dla IE11 - brak smooth scroll */
 @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
   html {
     scroll-behavior: auto;

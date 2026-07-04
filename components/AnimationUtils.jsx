@@ -1,15 +1,18 @@
 "use client";
 import { useEffect, useRef } from "react";
+import { useLanguage } from "../contexts/LanguageContext";
 
-/**
- * Hook do obsługi scroll reveal animations
- * Kompatybilny z IE 11+ dzięki IntersectionObserver polyfill
- */
 export function useScrollReveal(threshold = 0.1) {
   const elementsRef = useRef([]);
+  const { noAnim } = useLanguage();
 
   useEffect(() => {
-    // Sprawdź czy IntersectionObserver jest wspierany
+    if (noAnim) {
+      elementsRef.current.forEach((el) => {
+        if (el) el.classList.add('revealed');
+      });
+      return;
+    }
     if (typeof window !== 'undefined' && 'IntersectionObserver' in window) {
       const observer = new IntersectionObserver(
         (entries) => {
@@ -32,20 +35,15 @@ export function useScrollReveal(threshold = 0.1) {
         });
       };
     } else {
-      // Fallback dla IE 10 i starszych - od razu pokazuj elementy
       elementsRef.current.forEach((el) => {
         if (el) el.classList.add('revealed');
       });
     }
-  }, [threshold]);
+  }, [threshold, noAnim]);
 
   return elementsRef;
 }
 
-/**
- * Hook do obsługi parallax efektu
- * Kompatybilny z IE 11+
- */
 export function useParallax(speed = 0.5) {
   const elementRef = useRef(null);
 
@@ -57,22 +55,19 @@ export function useParallax(speed = 0.5) {
       const elementTop = elementRef.current.offsetTop;
       const elementHeight = elementRef.current.offsetHeight;
       
-      // Sprawdź czy element jest w viewport
       if (scrolled + window.innerHeight > elementTop && scrolled < elementTop + elementHeight) {
         const yPos = -(scrolled - elementTop) * speed;
         
-        // Użyj transform dla lepszej wydajności
         if (elementRef.current.style.transform !== undefined) {
           elementRef.current.style.transform = `translateY(${yPos}px)`;
         } else {
-          // Fallback dla bardzo starych przeglądarek
           elementRef.current.style.top = yPos + 'px';
         }
       }
     };
 
     window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Wywołaj od razu
+    handleScroll();
 
     return () => window.removeEventListener('scroll', handleScroll);
   }, [speed]);
@@ -80,16 +75,18 @@ export function useParallax(speed = 0.5) {
   return elementRef;
 }
 
-/**
- * Komponent ScrollReveal - automatycznie animuje dzieci przy scrollowaniu
- */
 export function ScrollReveal({ children, className = "", delay = 0 }) {
   const ref = useRef(null);
+  const { noAnim } = useLanguage();
 
   useEffect(() => {
     if (!ref.current) return;
 
-    // Sprawdź czy IntersectionObserver jest wspierany
+    if (noAnim) {
+      ref.current.classList.add('revealed');
+      return;
+    }
+
     if (typeof window !== 'undefined' && 'IntersectionObserver' in window) {
       const observer = new IntersectionObserver(
         (entries) => {
@@ -112,14 +109,13 @@ export function ScrollReveal({ children, className = "", delay = 0 }) {
         }
       };
     } else {
-      // Fallback - pokaż od razu
       setTimeout(() => {
         if (ref.current) {
           ref.current.classList.add('revealed');
         }
       }, delay);
     }
-  }, [delay]);
+  }, [delay, noAnim]);
 
   return (
     <div ref={ref} className={`scroll-reveal ${className}`}>
@@ -128,9 +124,6 @@ export function ScrollReveal({ children, className = "", delay = 0 }) {
   );
 }
 
-/**
- * Komponent Parallax - dodaje efekt parallax do dziecka
- */
 export function Parallax({ children, speed = 0.5, className = "" }) {
   const ref = useParallax(speed);
 
@@ -141,9 +134,6 @@ export function Parallax({ children, speed = 0.5, className = "" }) {
   );
 }
 
-/**
- * Hook do animacji przy najeżdżaniu myszką
- */
 export function useHoverAnimation() {
   const elementRef = useRef(null);
 

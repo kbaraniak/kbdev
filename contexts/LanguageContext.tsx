@@ -22,9 +22,9 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 
 function getInitialLanguage(): Language {
   if (typeof window === 'undefined') return 'pl_PL';
-  const path = window.location.pathname.replace(/^\/en/, '').replace(/^\/noanim/, '').replace(/^\//, '');
-  if (path.startsWith('en')) return 'en_US';
-  if (window.location.pathname === '/' || window.location.pathname === '/noanim' || window.location.pathname === '') return 'pl_PL';
+  const path = window.location.pathname;
+  if (path === '/en' || path === '/en/noanim' || path.startsWith('/en/')) return 'en_US';
+  if (path === '/' || path === '/noanim' || path === '') return 'pl_PL';
   const stored = localStorage.getItem('language') as Language;
   if (stored === 'en_US' || stored === 'pl_PL') return stored;
   const browserLang = navigator.language || '';
@@ -54,8 +54,10 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     if (noAnim) {
       document.body.classList.add('no-animations');
+      document.documentElement.style.scrollBehavior = 'auto';
     } else {
       document.body.classList.remove('no-animations');
+      document.documentElement.style.scrollBehavior = '';
     }
   }, [noAnim]);
 
