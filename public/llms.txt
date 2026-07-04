@@ -1,0 +1,67 @@
+# kbdev.run — Kamil B. (Klubuntu) | Portfolio
+
+> High-level summary of Kamil B.'s developer portfolio for LLMs, AI agents, and scrapers.
+
+## General Information
+- **Name:** Kamil B. (Klubuntu)
+- **Age:** 20 (as of 2026)
+- **Role:** Frontend / Full-Stack Developer
+- **Core Languages:** JavaScript (React, Next.js), TypeScript, Rust, Python, PHP
+- **Styling:** Tailwind CSS v4
+- **Portfolio URL:** https://kbdev.run
+
+## Multi-Language Route Structure
+The portfolio uses directory-based i18n with Polish at `/` and English at `/en`:
+- `/` — Polish home page
+- `/en` — English home page
+- `/archive` — Polish archived projects
+- `/en/archive` — English archived projects
+- `/project/{slug}` — Polish case study for a project
+- `/en/project/{slug}` — English case study for a project
+
+## Featured Projects (Top 3)
+
+### 1. Ba-Car
+- **URL:** https://ba-car.pl
+- **Description:** Professional website for a car detailing company. Focus on SEO, performance, and modern design.
+- **Tech Stack:** HTML, CSS, Astro
+- **Case Study:** `/project/bacar`
+
+### 2. Klubuntu | Two Sides
+- **URL:** https://klubuntu.eu.org
+- **Description:** Bilingual (PL/EN) community website presenting user and developer perspectives.
+- **Source:** https://github.com/Klubuntu/klubuntu.social
+- **Tech Stack:** HTML, CSS, JS
+- **Case Study:** `/project/klubuntu`
+
+### 3. OnerOS Web
+- **URL:** https://oneros.in
+- **Description:** Website for OnerOS — an operating system project. Includes download management, web preview, and GitHub integration.
+- **Source:** https://github.com/orgs/OnerOS-Project/repositories
+- **Tech Stack:** HTML, CSS, JS, React
+- **Case Study:** `/project/oneros`
+
+## Collaboration & Open Source
+- **Klubuntu** — Open Source Projects
+- **Puri Devs** — Development Team
+- **iTVT** (https://github.com/open-itvt) — Interactive TV Platform ecosystem
+
+## Key Achievements
+- Lighthouse scores: Performance 98, Accessibility 99, Best Practices 100, SEO 100
+- Seoptimer rating: A-
+- 24h post-launch CTR: 14%
+- 15+ projects delivered
+
+## Archived Projects
+All older projects moved to `/archive` for performance optimization:
+- **Odliczamydo.pl** — PHP countdown timer site
+- **Chestdrop** — React probability draw system (CS:GO style / wheel of fortune)
+- **MVList** — Minecraft server verification list with Captcha + Discord Webhook
+- **OneMyList** — Notes app with CKEditor 5, 22 colors, dark mode, PHP API
+- **Powrót RoxMb** — Nostalgic event page with YouTube autoplay background
+- **Countdown Web** — Multiple independent countdown timers
+- **Reqqel.music** — Music bio page (Spotify, Soundcloud, TikTok, YouTube links)
+- **Clouds Network** — VPS hosting landing page with VM packages
+
+## Document Links
+- For detailed technical architecture, see: [/llms-full.txt](/llms-full.txt)

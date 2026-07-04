@@ -1,0 +1,140 @@
+# kbdev.run — Technical Specification & Deep Dive
+
+> Detailed breakdown of architecture, tech stack, and project structures for LLMs.
+
+## Developer Profile
+- **Name:** Kamil B. (Klubuntu)
+- **Age:** 20
+- **Role:** Frontend / Full-Stack Developer
+- **Primary Stack:** JavaScript (React, Next.js 16.1.5), TypeScript, Tailwind CSS v4, HTML, CSS
+- **Secondary Stack:** Rust, Python, PHP
+- **Portfolio URL:** https://kbdev.run
+- **Build Tool:** Turbopack
+
+## Architecture & Routing
+
+### Framework
+- Next.js 16.1.5 App Router with static site generation (SSG)
+- All routes are pre-rendered at build time (`○ (Static)` in build output)
+
+### Multi-Language System (Custom i18n)
+The portfolio uses a custom React Context-based i18n system (no external libraries):
+- Translation files: `json/lang/pl_PL.json` and `json/lang/en_US.json`
+- Language detection: reads `window.location.pathname` on load
+  - `/` → Polish (pl_PL)
+  - `/en` → English (en_US)
+- Language switching: `window.history.replaceState()` — updates URL without page reload
+- Persistence: `localStorage` (used only for non-root routes as fallback)
+- Dynamic `html lang` attribute updated via `useEffect`
+
+### Complete Route Tree (33 static routes)
+```
+/                              PL Home (3 featured projects + About + Collaboration + Support)
+/archive                       PL Archived projects (8 projects)
+/project/bacar                 PL Case study: Ba-Car
+/project/chestdrop             PL Case study: Chestdrop
+/project/clouds-network        PL Case study: Clouds Network
+/project/countdown-web         PL Case study: Countdown Web
+/project/itvt                  PL Case study: iTVT
+/project/klubuntu              PL Case study: Klubuntu | Two Sides
+/project/mvlist                PL Case study: MVList
+/project/odliczamydo           PL Case study: Odliczamydo.pl
+/project/onemylist             PL Case study: OneMyList
+/project/oneros                PL Case study: OnerOS Web
+/project/powrot-roxmb          PL Case study: Powrót RoxMb
+/project/reqqel-music          PL Case study: Reqqel.music
+/en                            EN Home
+/en/archive                    EN Archived projects
+/en/project/bacar              EN Case study: Ba-Car
+/en/project/chestdrop          EN Case study: Chestdrop
+/en/project/clouds-network     EN Case study: Clouds Network
+/en/project/countdown-web      EN Case study: Countdown Web
+/en/project/itvt               EN Case study: iTVT
+/en/project/klubuntu           EN Case study: Klubuntu | Two Sides
+/en/project/mvlist             EN Case study: MVList
+/en/project/odliczamydo        EN Case study: Odliczamydo.pl
+/en/project/onemylist          EN Case study: OneMyList
+/en/project/oneros             EN Case study: OnerOS Web
+/en/project/powrot-roxmb       EN Case study: Powrót RoxMb
+/en/project/reqqel-music       EN Case study: Reqqel.music
+/sitemap.xml                   Sitemap
+```
+
+## Component Architecture
+
+### Layout (`app/layout.tsx`)
+- Root server component
+- Fonts: Geist, Geist Mono (Google Fonts)
+- Wraps children in `Providers` (LanguageContext)
+- IE 11-12 polyfills (inline)
+
+### Page Components
+- `HomePageContent.tsx` — Main page layout shared between `/` and `/en`
+- `ArchiveContent.tsx` — Archived project listing shared between `/archive` and `/en/archive`
+- `CaseStudyContent.tsx` — Generic case study component, takes `slug` prop, renders challenges/achievements from translations
+- `CaseStudyBaCar.tsx` — Thin wrapper (legacy, delegates to CaseStudyContent)
+
+### Navigation (`NavMenu.jsx`)
+- Desktop: horizontal pill nav with spring-animated sliding indicator
+- Mobile: hamburger menu with dropdown overlay
+- Items: O mnie / About Me, Projekty / Projects, Współpraca / Collaboration, Wsparcie / Support
+- On subpages, missing sections navigate to main page with hash (`/#section`)
+
+### Language Switcher
+- PL/EN flag buttons in header
+- 700ms cooldown to prevent spam
+- Updates body opacity (150ms fade) on switch
+- `history.replaceState` for URL update — no page reload
+
+### Project Card (`ProjectCard.jsx`)
+- Horizontal card with project icon, name, stack tags, and action buttons
+- Icons: project-specific SVGs (car, TV, disc, cloud, music note, clock, notepad, gamepad, wheel, countdown)
+- Stack tags: color-coded badges (HTML, CSS, JS, TypeScript, React, Astro, Vue, PHP, Python, Rust)
+- Name is clickable — navigates to case study page if available
+- Website/GitHub buttons open external links
+- Buttons are full-width centered on mobile
+
+### Scroll Reveal (`AnimationUtils.jsx`)
+- IntersectionObserver-based fade-in animations on scroll
+- CSS class `revealed` triggers keyframe animations
+- Fallback for older browsers
+
+## Tech Stack Details
+
+### Frontend
+- **Framework:** Next.js 16.1.5 (App Router)
+- **UI Library:** React 19.2.4
+- **Language:** TypeScript + JavaScript
+- **Styling:** Tailwind CSS v4 (PostCSS)
+- **Icons:** Lucide React, inline SVGs
+- **Fonts:** Geist (Google Fonts)
+
+### Animations
+- CSS keyframe animations (`animations.css`)
+- ScrollReveal (IntersectionObserver)
+- Parallax (scroll event)
+- NavMenu spring physics (custom implementation)
+- Hover animations (3D tilt)
+
+### Build & Performance
+- Turbopack bundler
+- Static Site Generation (SSG) — all pages pre-rendered
+- Next.js Image optimization (Gravatar avatar)
+
+## Case Study Structure
+Each case study page (`/project/{slug}`) follows the same template:
+1. Title
+2. Website/GitHub link buttons
+3. Two-column grid (desktop) / stacked (mobile):
+   - **Challenges** (target icon, red) — checkbox list of project challenges
+   - **Achievements** (star icon, yellow) — checkbox list of results
+4. Back link (returns to `/` for featured, `/archive` for archived)
+
+Content sourced from translation JSON under `caseStudies.{slug}`.
+
+## SEO & Internationalization
+- All content translated to PL and EN
+- `html lang` attribute set dynamically (pl/en)
+- Clean URL structure with directory-based locale
+- Static generation ensures <100ms TTFB
+- All routes in `/sitemap.xml`
