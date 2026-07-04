@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Reqqel – Case Study | kbdev",
   description: "Case study of the Reqqel project. See challenges and achievements.",
   keywords: ["Reqqel", "case study", "project", "frontend", "web developer", "Klubuntu"],
+  alternates: { canonical: "https://kbdev.run/en/project/reqqel-music" },
   openGraph: { title: "Reqqel – Case Study | kbdev", description: "Check out the Reqqel project case study." },
   other: { "language": "English" },
 };

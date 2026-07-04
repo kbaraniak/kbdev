@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "kbdev – Portfolio (no-animation version) | Kamil B. (Klubuntu)",
   description: "Simplified version of Kamil B.'s portfolio without animations – for faster loading and better accessibility. Frontend developer: React, Next.js, Tailwind CSS.",
   keywords: ["portfolio no animations", "simplified version", "accessibility", "frontend developer", "Kamil B", "Klubuntu", "fast loading", "React", "Next.js"],
+  alternates: { canonical: "https://kbdev.run/en/noanim" },
   robots: { index: true, follow: true },
   openGraph: {
     title: "kbdev – Portfolio (no-animation version) | Kamil B. (Klubuntu)",

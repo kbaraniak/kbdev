@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "MVList – Case Study | kbdev",
   description: "Case study projektu MVList. Zobacz wyzwania i osiagniecia.",
   keywords: ["MVList", "case study", "projekt", "frontend", "web developer", "Klubuntu"],
+  alternates: { canonical: "https://kbdev.run/project/mvlist" },
   openGraph: { title: "MVList – Case Study | kbdev", description: "Sprawdz case study projektu MVList." },
   other: { "language": "Polish" },
 };

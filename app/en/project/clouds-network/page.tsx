@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Cloud Networks – Case Study | kbdev",
   description: "Case study of the Cloud Networks project. See challenges and achievements.",
   keywords: ["Cloud Networks", "case study", "project", "frontend", "web developer", "Klubuntu"],
+  alternates: { canonical: "https://kbdev.run/en/project/clouds-network" },
   openGraph: { title: "Cloud Networks – Case Study | kbdev", description: "Check out the Cloud Networks project case study." },
   other: { "language": "English" },
 };

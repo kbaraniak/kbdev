@@ -26,9 +26,7 @@ export default function HomePageContent() {
   return (
     <div className="font-sans">
       <header className="relative z-[100000] flex flex-wrap justify-center items-center gap-4 md:gap-8 py-5 px-4 animate-fade-in-down">
-        <button onClick={handleLogo} className="bg-none border-none cursor-pointer" type="button">
-          <h2 className="text-3xl md:text-4xl font-bold text-white">kbdev</h2>
-        </button>
+        <h1 onClick={handleLogo} className="text-3xl md:text-4xl font-bold text-white cursor-pointer">kbdev</h1>
         <NavMenu />
         <div 
           className="flex items-center gap-1 p-1 rounded-lg animate-fade-in-down delay-200"

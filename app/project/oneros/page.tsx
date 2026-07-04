@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "OnerOS Web – Case Study | kbdev",
   description: "Case study projektu OnerOS Web. Zobacz wyzwania i osiagniecia.",
   keywords: ["OnerOS Web", "case study", "projekt", "frontend", "web developer", "Klubuntu"],
+  alternates: { canonical: "https://kbdev.run/project/oneros" },
   openGraph: { title: "OnerOS Web – Case Study | kbdev", description: "Sprawdz case study projektu OnerOS Web." },
   other: { "language": "Polish" },
 };

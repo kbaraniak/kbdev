@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "OneMyList – Case Study | kbdev",
   description: "Case study projektu OneMyList. Zobacz wyzwania i osiagniecia.",
   keywords: ["OneMyList", "case study", "projekt", "frontend", "web developer", "Klubuntu"],
+  alternates: { canonical: "https://kbdev.run/project/onemylist" },
   openGraph: { title: "OneMyList – Case Study | kbdev", description: "Sprawdz case study projektu OneMyList." },
   other: { "language": "Polish" },
 };

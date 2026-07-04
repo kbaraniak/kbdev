@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Ba-Car – Case Study | kbdev",
   description: "Case study projektu Ba-Car. Zobacz wyzwania i osiagniecia.",
   keywords: ["Ba-Car", "case study", "projekt", "frontend", "web developer", "Klubuntu"],
+  alternates: { canonical: "https://kbdev.run/project/bacar" },
   openGraph: { title: "Ba-Car – Case Study | kbdev", description: "Sprawdz case study projektu Ba-Car." },
   other: { "language": "Polish" },
 };

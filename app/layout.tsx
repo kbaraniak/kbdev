@@ -25,6 +25,9 @@ export const metadata: Metadata = {
   keywords: ["portfolio", "frontend developer", "React", "Next.js", "Tailwind CSS", "web developer", "Klubuntu", "Kamil B", "JavaScript", "TypeScript"],
   authors: [{ name: "Kamil B. (Klubuntu)", url: baseUrl }],
   robots: { index: true, follow: true },
+  alternates: {
+    canonical: baseUrl,
+  },
   openGraph: {
     type: "website",
     siteName: "kbdev",

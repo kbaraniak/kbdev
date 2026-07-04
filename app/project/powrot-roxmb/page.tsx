@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Powrot RoxMb – Case Study | kbdev",
   description: "Case study projektu Powrot RoxMb. Zobacz wyzwania i osiagniecia.",
   keywords: ["Powrot RoxMb", "case study", "projekt", "frontend", "web developer", "Klubuntu"],
+  alternates: { canonical: "https://kbdev.run/project/powrot-roxmb" },
   openGraph: { title: "Powrot RoxMb – Case Study | kbdev", description: "Sprawdz case study projektu Powrot RoxMb." },
   other: { "language": "Polish" },
 };

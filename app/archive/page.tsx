@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Archiwum Projektów | kbdev",
   description: "Archiwum starszych projektów Kamila B. (Klubuntu): Odliczamydo.pl, Chestdrop, MVList, OneMyList, Powrót RoxMb, Countdown Web, Reqqel.music, Clouds Network.",
   keywords: ["archiwum projektów", "starsze projekty", "Klubuntu", "frontend", "web developer", "portfolio archiwum", "Odliczamydo", "Chestdrop", "MVList"],
+  alternates: { canonical: "https://kbdev.run/archive" },
   openGraph: { title: "Archiwum Projektów | kbdev", description: "Archiwum starszych projektów frontendowych Kamila B.", locale: "pl_PL" },
   twitter: { title: "Archiwum Projektów | kbdev", description: "Archiwum starszych projektów frontendowych Kamila B." },
   other: { "language": "Polish" },

@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Odliczamydo.pl – Case Study | kbdev",
   description: "Case study projektu Odliczamydo.pl. Zobacz wyzwania i osiagniecia.",
   keywords: ["Odliczamydo.pl", "case study", "projekt", "frontend", "web developer", "Klubuntu"],
+  alternates: { canonical: "https://kbdev.run/project/odliczamydo" },
   openGraph: { title: "Odliczamydo.pl – Case Study | kbdev", description: "Sprawdz case study projektu Odliczamydo.pl." },
   other: { "language": "Polish" },
 };

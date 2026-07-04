@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Countdown Web – Case Study | kbdev",
   description: "Case study of the Countdown Web project. See challenges and achievements.",
   keywords: ["Countdown Web", "case study", "project", "frontend", "web developer", "Klubuntu"],
+  alternates: { canonical: "https://kbdev.run/en/project/countdown-web" },
   openGraph: { title: "Countdown Web – Case Study | kbdev", description: "Check out the Countdown Web project case study." },
   other: { "language": "English" },
 };

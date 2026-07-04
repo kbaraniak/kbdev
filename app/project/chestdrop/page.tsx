@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Chestdrop – Case Study | kbdev",
   description: "Case study projektu Chestdrop. Zobacz wyzwania i osiagniecia.",
   keywords: ["Chestdrop", "case study", "projekt", "frontend", "web developer", "Klubuntu"],
+  alternates: { canonical: "https://kbdev.run/project/chestdrop" },
   openGraph: { title: "Chestdrop – Case Study | kbdev", description: "Sprawdz case study projektu Chestdrop." },
   other: { "language": "Polish" },
 };

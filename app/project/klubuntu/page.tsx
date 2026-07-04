@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Klubuntu | Two Sides – Case Study | kbdev",
   description: "Case study projektu Klubuntu | Two Sides. Zobacz wyzwania i osiagniecia.",
   keywords: ["Klubuntu | Two Sides", "case study", "projekt", "frontend", "web developer", "Klubuntu"],
+  alternates: { canonical: "https://kbdev.run/project/klubuntu" },
   openGraph: { title: "Klubuntu | Two Sides – Case Study | kbdev", description: "Sprawdz case study projektu Klubuntu | Two Sides." },
   other: { "language": "Polish" },
 };

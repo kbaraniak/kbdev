@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "iTVT – Case Study | kbdev",
   description: "Case study of the iTVT project. See challenges and achievements.",
   keywords: ["iTVT", "case study", "project", "frontend", "web developer", "Klubuntu"],
+  alternates: { canonical: "https://kbdev.run/en/project/itvt" },
   openGraph: { title: "iTVT – Case Study | kbdev", description: "Check out the iTVT project case study." },
   other: { "language": "English" },
 };
