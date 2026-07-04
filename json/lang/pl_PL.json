@@ -12,7 +12,8 @@
     "title": "O mnie",
     "greeting": "Cześć, jestem Kamil.",
     "age": "Mam 20 lat. Moim celem jest pomaganie innym, a w przyszłości planuję zrewolucjonizować świat.",
-    "passion": "Tworzę szybkie, nowoczesne strony internetowe i aplikacje webowe z naciskiem na wydajność, SEO oraz długoterminową łatwość utrzymania"
+    "passion": "Tworzę szybkie, nowoczesne strony internetowe i aplikacje webowe z naciskiem na wydajność, SEO oraz długoterminową łatwość utrzymania",
+    "stats": "15+ projektów | Lighthouse: 98/99/100/100 | Seoptimer: (od B- do A-)"
   },
   "projects": {
     "title": "Moje Projekty",

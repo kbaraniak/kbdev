@@ -12,7 +12,8 @@
     "title": "About Me",
     "greeting": "Hi, I'm Kamil.",
     "age": "I'm 20 yo. My goal is to help others, and in the future, I plan to revolutionize the world.",
-    "passion": "I create fast, modern websites and web applications with a focus on performance, SEO, and long-term maintainability."
+    "passion": "I create fast, modern websites and web applications with a focus on performance, SEO, and long-term maintainability.",
+    "stats": "15+ projects | Lighthouse: 98/99/100/100 | Seoptimer: (B- to A-)"
   },
   "projects": {
     "title": "My Projects",
