@@ -11,8 +11,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const staticPages = [
     { url: baseUrl, lastModified: new Date() },
+    { url: `${baseUrl}/noanim`, lastModified: new Date() },
     { url: `${baseUrl}/archive`, lastModified: new Date() },
     { url: `${baseUrl}/en`, lastModified: new Date() },
+    { url: `${baseUrl}/en/noanim`, lastModified: new Date() },
     { url: `${baseUrl}/en/archive`, lastModified: new Date() },
   ];
 

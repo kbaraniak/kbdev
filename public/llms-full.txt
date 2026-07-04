@@ -29,8 +29,9 @@ The portfolio uses a custom React Context-based i18n system (no external librari
 
 ### Complete Route Tree (33 static routes)
 ```
-/                              PL Home (3 featured projects + About + Collaboration + Support)
-/archive                       PL Archived projects (8 projects)
+/                            PL Home (3 featured projects + About + Collaboration + Support)
+/noanim                      PL Home without animations
+/archive                     PL Archived projects (8 projects)
 /project/bacar                 PL Case study: Ba-Car
 /project/chestdrop             PL Case study: Chestdrop
 /project/clouds-network        PL Case study: Clouds Network
@@ -44,6 +45,7 @@ The portfolio uses a custom React Context-based i18n system (no external librari
 /project/powrot-roxmb          PL Case study: Powrót RoxMb
 /project/reqqel-music          PL Case study: Reqqel.music
 /en                            EN Home
+/en/noanim                    EN Home without animations
 /en/archive                    EN Archived projects
 /en/project/bacar              EN Case study: Ba-Car
 /en/project/chestdrop          EN Case study: Chestdrop

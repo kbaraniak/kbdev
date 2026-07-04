@@ -10,6 +10,11 @@
 - **Styling:** Tailwind CSS v4
 - **Portfolio URL:** https://kbdev.run
 
+## No-Animation Variant
+A lightweight version without CSS animations, scroll-reveal effects, or background gradient transitions is available for screen readers, low-power devices, and accessibility:
+- `/noanim` — Polish no-animation version
+- `/en/noanim` — English no-animation version
+
 ## Multi-Language Route Structure
 The portfolio uses directory-based i18n with Polish at `/` and English at `/en`:
 - `/` — Polish home page
