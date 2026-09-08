@@ -27,18 +27,18 @@ export default function WebsitesFrontend() {
                 <ProjectCard 
                     id="Ba-Car" 
                     website_url="https://ba-car.pl" 
-                    stack={["astro", "css"]} 
+                    stack={["astro", "css", "js"]} 
                 />
                 <ProjectCard 
                     id="iTVT (Poland)" 
                     website_url="https://itvt.xyz" 
-                    stack={["vue", "css"]} 
+                    stack={["vue", "css", "js"]} 
                 />
                 <ProjectCard 
                     id="Klubuntu | Two Sides" 
                     website_url="https://klubuntu.eu.org" 
                     source_url="https://github.com/Klubuntu/klubuntu.social" 
-                    stack={["astro", "css"]} 
+                    stack={["astro", "css", "js"]} 
                 />
                 <ProjectCard 
                     id="OnerOS Web" 
