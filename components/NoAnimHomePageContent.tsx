@@ -92,9 +92,9 @@ export default function NoAnimHomePageContent() {
           <h3 className="text-2xl text-center">{t.projects.subtitle}</h3>
           <p className="text-sm text-gray-500 text-center mt-1">{t.projects.clickHint}</p>
           <div className="w-full flex flex-col items-center gap-3">
-            <ProjectCard id="Ba-Car" website_url="https://ba-car.pl" stack={["html", "css", "astro"] as any} />
-            <ProjectCard id="Klubuntu | Two Sides" website_url="https://klubuntu.eu.org" source_url="https://github.com/Klubuntu/klubuntu.social" stack={["html", "css", "js"] as any} />
-            <ProjectCard id="OnerOS Web" website_url="https://oneros.in" source_url="https://github.com/orgs/OnerOS-Project/repositories" stack={["html", "css", "js", "react"] as any} />
+            <ProjectCard id="Ba-Car" website_url="https://ba-car.pl" stack={["astro", "css"] as any} />
+            <ProjectCard id="Klubuntu | Two Sides" website_url="https://klubuntu.eu.org" source_url="https://github.com/Klubuntu/klubuntu.social" stack={["astro", "css"] as any} />
+            <ProjectCard id="OnerOS Web" website_url="https://oneros.in" source_url="https://github.com/orgs/OnerOS-Project/repositories" stack={["react", "css", "js"] as any} />
           </div>
         </section>
 
