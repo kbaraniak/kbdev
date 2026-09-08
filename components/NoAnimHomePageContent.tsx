@@ -163,7 +163,7 @@ export default function NoAnimHomePageContent() {
               </a>
             </div>
             <div className="w-full md:w-auto">
-              <a href="https://patreon.com/Klubuntu" className="block">
+              <a href="https://cuplink.to/kamil-b" className="block">
                 <div className="rounded-lg p-5 flex items-center gap-5 hover:scale-105 transition-all duration-300" style={{background: 'rgba(255, 255, 255, 0.05)', border: '1px solid rgba(255, 255, 255, 0.1)', borderLeft: '4px solid rgb(127, 29, 29)', backdropFilter: 'blur(10px)'}}>
                   <svg xmlns="http://www.w3.org/2000/svg" width={45} height={45} viewBox="0 0 24 24" className="text-red-900 flex-shrink-0">
                     <path fill="currentColor" d="M14.82 2.41c3.96 0 7.18 3.24 7.18 7.21c0 3.96-3.22 7.18-7.18 7.18c-3.97 0-7.21-3.22-7.21-7.18c0-3.97 3.24-7.21 7.21-7.21M2 21.6h3.5V2.41H2z"></path>
